@@ -10,7 +10,7 @@
             <div class="columns">
                 <div class="column">
                     <form @submit.prevent="update">
-                        <h1 class="title">XKCD Passphrase</h1>
+                        <h1 class="title">Passphrase Generator</h1>
                         <div class="field">
                             <label for="sel-dictionary" class="label">Dictionary</label>
                             <div class="control">
@@ -142,22 +142,33 @@
                     </form>
                 </div>
                 <div class="column" v-if="result === null">
-                    <h1 class="title">What is it?</h1>
+                    <h2 class="subtitle">What is it?</h2>
                     <article class="message">
                         <div class="message-body">
-                            This is an XKCD-style password phrase generator.
+                            This is a password phrase generator.
                             <br />It generates a password phrase based on words from the selected dictionary.
                             <br />Also, you have an option to add a few digits to make it more secure.
                             <br />
                             <a
                                 href="https://xkcd.com/936/"
                                 target="_blank"
-                            >Check out the relevant XKCD</a>.
+                            >Check out the xkcd comic about password strength</a>.
+                        </div>
+                    </article>
+
+                    <h2 class="subtitle">Source code</h2>
+                    <article class="message">
+                        <div class="message-body">
+                            <!--
+                            Source code is availabe on
+                            <a href="https://github.com/rensatsu/passphrase-gen" target="_blank">Github</a>.
+                            -->
+                            Source code will be available soon on Github.
                         </div>
                     </article>
                 </div>
                 <div class="column" v-else>
-                    <h1 class="title">Result</h1>
+                    <h2 class="subtitle">Result</h2>
                     <article class="message is-danger" v-if="error !== null">
                         <div class="message-body">{{ error }}</div>
                     </article>
