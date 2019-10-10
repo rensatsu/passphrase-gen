@@ -1,7 +1,6 @@
-<style lasng="scss">
-.mt-1 {
-    margin-top: 1rem;
-}
+<style lang="scss">
+@import './assets/style';
+@import '../node_modules/bulma/bulma';
 </style>
 
 <template>
@@ -9,6 +8,7 @@
         <div class="container">
             <div class="columns">
                 <div class="column">
+                    <FontPreload></FontPreload>
                     <form @submit.prevent="update">
                         <h1 class="title">Passphrase Generator</h1>
                         <div class="field">
@@ -180,7 +180,9 @@
 </template>
 
 <script>
-import 'bulma';
+import 'typeface-ibm-plex-sans';
+import 'typeface-ibm-plex-mono';
+import fontPreload from './font-preload';
 import dictionaryList from './libs/load-dictionaries';
 import phraseGenerator from './libs/phrase-generator';
 import * as settingsStorage from './libs/settings-storage';
@@ -226,6 +228,9 @@ export default {
             locked: false,
             error: null
         };
+    },
+    components: {
+        FontPreload: fontPreload
     },
     methods: {
         reset() {
