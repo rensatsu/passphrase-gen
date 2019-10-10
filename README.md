@@ -1,4 +1,10 @@
 # xkcd-pw-vue
+XKCD style password phrase generator.
+
+Based on the [XKCD #936](https://xkcd.com/936/).
+
+## Build Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e5b9ab6c-1ae8-4a70-8f83-bfbc311db202/deploy-status)](https://app.netlify.com/sites/ren-phrase/deploys)
 
 ## Project setup
 ```
@@ -19,6 +25,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
