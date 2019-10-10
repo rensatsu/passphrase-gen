@@ -1,4 +1,7 @@
 # Password phrase generator
+
+![Logo Banner](./.repository/banner.png)
+
 Web application to generate a password phrase based on words from the dictionary.
 
 Based on the [XKCD #936](https://xkcd.com/936/).
