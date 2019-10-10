@@ -184,12 +184,17 @@ import 'bulma';
 import dictionaryList from './libs/load-dictionaries';
 import phraseGenerator from './libs/phrase-generator';
 import * as settingsStorage from './libs/settings-storage';
+import delimiters from './libs/delimiters';
+import wordCases from './libs/word-cases';
 
+// load settings from url
 const lSettings = settingsStorage.load();
 
+// load dictionaries list
 const dictionaries = dictionaryList.list();
 const defaultDictCode = Object.values(dictionaries)[0].code;
 
+// default set of options
 const options = {
     dictionary: defaultDictCode,
     words: 3,
@@ -201,6 +206,7 @@ const options = {
     count: 1
 };
 
+// merge options from settings-storage
 if (lSettings !== null) {
     Object.entries(options).forEach(([key, value]) => {
         if (key in lSettings) {
@@ -214,23 +220,8 @@ export default {
         return {
             dictionaries: dictionaries,
             options: options,
-            wordCases: {
-                lower: 'lower case',
-                upper: 'UPPER CASE',
-                ucfirst: 'Upper Case First Letter',
-                random: 'RANDOM case'
-            },
-            delimiters: [
-                { name: 'Dash', value: '-' },
-                { name: 'Space', value: ' ' },
-                { name: 'Underscore', value: '_' },
-                { name: 'Plus', value: '+' },
-                { name: 'Equals', value: '=' },
-                { name: 'Asterisk', value: '*' },
-                { name: 'Dollar', value: '$' },
-                { name: 'Exclamaition mark', value: '!' },
-                { name: 'No delimiter', value: '' }
-            ],
+            wordCases: wordCases,
+            delimiters: delimiters,
             result: null,
             locked: false,
             error: null
