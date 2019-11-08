@@ -40,13 +40,10 @@ const fetchDictionary = (name) => {
                 throw new Error('Unable to get dictionary information');
             }
 
-            const fd = new FormData();
-            fd.append('dict', dictData.path);
+            const url = new URL('https://ren-phrase-dict.netlify.com/');
+            url.pathname = dictData.path;
 
-            const resp = await fetch('https://rensatsu.xyz/apps/xkcdpw/api/get-dict.php', {
-                body: fd,
-                method: 'POST'
-            });
+            const resp = await fetch(url, { method: 'GET' });
 
             const text = await resp.text();
 

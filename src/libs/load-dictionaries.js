@@ -16,7 +16,7 @@ collection.add(new Dictionary({
 collection.add(new Dictionary({
     code: 'eff-large',
     name: 'EFF Large (five dice)',
-    path: 'eff_large.txt',
+    path: 'eff_large_wordlist.txt',
     title: 'EFF\'s New Wordlists for Random Passphrases (five dice)',
     source: 'https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases'
 }));
@@ -24,7 +24,7 @@ collection.add(new Dictionary({
 collection.add(new Dictionary({
     code: 'eff-short1',
     name: 'EFF Short 1 (four dice)',
-    path: 'eff_short1.txt',
+    path: 'eff_short_wordlist_1.txt',
     title: 'EFF\'s New Wordlists for Random Passphrases (four dice)',
     source: 'https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases'
 }));
@@ -32,7 +32,7 @@ collection.add(new Dictionary({
 collection.add(new Dictionary({
     code: 'eff-short2',
     name: 'EFF Short 2 (unique prefix)',
-    path: 'eff_short2.txt',
+    path: 'eff_short_wordlist_2_0.txt',
     title: 'EFF\'s New Wordlists for Random Passphrases (with words that have unique three-character prefixes)',
     source: 'https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases'
 }));
@@ -40,7 +40,7 @@ collection.add(new Dictionary({
 collection.add(new Dictionary({
     code: 'anime',
     name: 'Anime',
-    path: 'anime.txt',
+    path: 'anime-titles.txt',
     title: 'Anime titles',
     source: 'https://wiki.anidb.net/w/API'
 }));
