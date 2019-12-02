@@ -1,16 +1,34 @@
 <style lang="scss">
-@import './assets/style';
+@import './assets/stylesheets/app';
 @import '../node_modules/bulma/bulma';
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.app-icon {
+    width: 48px;
+    height: 48px;
+    background: url('./assets/images/icon48.png');
+    background-size: 100% 100%;
+}
 </style>
 
 <template>
     <section class="section">
         <div class="container">
+            <header class="mb-1">
+                <div class="app-icon"></div>
+                <h1 class="title ml-1">Passphrase Generator</h1>
+            </header>
+
             <div class="columns">
                 <div class="column">
                     <FontPreload></FontPreload>
                     <form @submit.prevent="update">
-                        <h1 class="title">Passphrase Generator</h1>
+                        <h2 class="subtitle">Parameters</h2>
+
                         <div class="field">
                             <label for="sel-dictionary" class="label">Dictionary</label>
                             <div class="control">
@@ -160,7 +178,10 @@
                     <article class="message">
                         <div class="message-body">
                             Source code is availabe on
-                            <a href="https://github.com/rensatsu/passphrase-gen" target="_blank">Github</a>.
+                            <a
+                                href="https://github.com/rensatsu/passphrase-gen"
+                                target="_blank"
+                            >Github</a>.
                         </div>
                     </article>
                 </div>
