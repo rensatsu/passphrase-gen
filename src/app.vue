@@ -184,6 +184,27 @@ header {
                             >Github</a>.
                         </div>
                     </article>
+
+                    <h2 class="subtitle">Dictionary information</h2>
+                    <article class="message">
+                        <div class="message-body">
+                            <h3 class="mb-1">
+                                {{ dictionaries[options.dictionary].name }}
+                            </h3>
+                            <p>
+                                {{ dictionaries[options.dictionary].title }}
+                            </p>
+                            <p>
+                                <a
+                                    :href="dictionaries[options.dictionary].source"
+                                    rel="nofollow"
+                                    target="_blank"
+                                >
+                                    Source
+                                </a>
+                            </p>
+                        </div>
+                    </article>
                 </div>
                 <div class="column" v-else>
                     <h2 class="subtitle">Result</h2>
