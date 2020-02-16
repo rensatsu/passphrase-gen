@@ -13,6 +13,16 @@ header {
     background: url('./assets/images/icon48.png');
     background-size: 100% 100%;
 }
+
+.collector {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    display: inline-flex;
+    pointer-events: none;
+    position: fixed;
+}
 </style>
 
 <template>
@@ -218,6 +228,13 @@ header {
                 </div>
             </div>
         </div>
+
+        <!-- Collector -->
+        <img src="https://collector.rencloud.workers.dev/collect?app=xkcdpw"
+            alt="Collector" role="presentation" width="1" height="1"
+            class="collector" loading="off"
+        />
+        <!-- END: Collector -->
     </section>
 </template>
 
