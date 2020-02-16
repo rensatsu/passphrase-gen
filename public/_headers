@@ -1,5 +1,5 @@
 /*
-    content-security-policy: default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; connect-src 'self' https://ren-phrase-dict.netlify.com; img-src 'self' data:;
+    content-security-policy: default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; connect-src 'self' https://ren-phrase-dict.netlify.com; img-src 'self' data: https://collector.rencloud.workers.dev;
     strict-transport-security: max-age=31536000;
     x-content-type-options: nosniff
     x-xss-protection: 1; mode=block
