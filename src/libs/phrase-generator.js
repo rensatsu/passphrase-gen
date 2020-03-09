@@ -40,7 +40,7 @@ const fetchDictionary = (name) => {
                 throw new Error('Unable to get dictionary information');
             }
 
-            const url = new URL('https://ren-phrase-dict.netlify.com/');
+            const url = new URL('https://ren-phrase-dict.netlify.app/');
             url.pathname = dictData.path;
 
             const resp = await fetch(url, { method: 'GET' });
