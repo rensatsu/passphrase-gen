@@ -1,28 +1,6 @@
 <style lang="scss">
+@import './assets/stylesheets/bulma';
 @import './assets/stylesheets/app';
-@import '../node_modules/bulma/bulma';
-
-header {
-    display: flex;
-    align-items: center;
-}
-
-.app-icon {
-    width: 48px;
-    height: 48px;
-    background: url('./assets/images/icon48.png');
-    background-size: 100% 100%;
-}
-
-.collector {
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    display: inline-flex;
-    pointer-events: none;
-    position: fixed;
-}
 </style>
 
 <template>

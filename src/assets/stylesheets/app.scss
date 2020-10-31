@@ -1,17 +1,35 @@
 @charset "utf-8";
 
-$family-sans-serif: "IBM Plex Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-
-$family-monospace: "IBM Plex Mono", monospace;
-
 .mt-1 {
-    margin-top: 1rem;
+    margin-top: 1rem !important;
 }
 
 .mb-1 {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
 }
 
 .ml-1 {
-    margin-left: 1rem;
+    margin-left: 1rem !important;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.app-icon {
+    width: 48px;
+    height: 48px;
+    background: url('./assets/images/icon48.png');
+    background-size: 100% 100%;
+}
+
+.collector {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    display: inline-flex;
+    pointer-events: none;
+    position: fixed;
 }
