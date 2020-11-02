@@ -23,13 +23,3 @@ header {
     background: url('./assets/images/icon48.png');
     background-size: 100% 100%;
 }
-
-.collector {
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    display: inline-flex;
-    pointer-events: none;
-    position: fixed;
-}

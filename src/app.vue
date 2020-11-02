@@ -206,13 +206,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Collector -->
-        <img src="https://collector.rencloud.workers.dev/collect?app=xkcdpw"
-            alt="Collector" role="presentation" width="1" height="1"
-            class="collector" loading="off"
-        />
-        <!-- END: Collector -->
     </section>
 </template>
 
