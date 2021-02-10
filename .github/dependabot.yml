@@ -8,6 +8,7 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "montly"
+      time: "11:00"
     reviewers:
       - "rensatsu"
