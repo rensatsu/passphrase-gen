@@ -187,12 +187,12 @@ import passwordList from "./components/password-list";
 
 import dictionaryList from "./libs/load-dictionaries";
 import phraseGenerator from "./libs/phrase-generator";
-import * as settingsStorage from "./libs/settings-storage";
+import { load as settingsLoad, save as settingsSave } from "./libs/settings-storage";
 import delimiters from "./libs/delimiters";
 import wordCases from "./libs/word-cases";
 
 // load settings from url
-const lSettings = settingsStorage.load();
+const lSettings = settingsLoad();
 
 // load dictionaries list
 const dictionaries = dictionaryList.list();
@@ -261,7 +261,7 @@ export default {
             delimiter: this.options.delimiter,
           });
 
-          settingsStorage.save(this.options);
+          settingsSave(this.options);
 
           if (this.result === null) {
             this.result = [];
