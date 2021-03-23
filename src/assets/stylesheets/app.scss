@@ -1,25 +1,25 @@
 @charset "utf-8";
 
 .mt-1 {
-    margin-top: 1rem !important;
+  margin-top: 1rem !important;
 }
 
 .mb-1 {
-    margin-bottom: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .ml-1 {
-    margin-left: 1rem !important;
+  margin-left: 1rem !important;
 }
 
 header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .app-icon {
-    width: 48px;
-    height: 48px;
-    background: url('./assets/images/icon48.png');
-    background-size: 100% 100%;
+  width: 48px;
+  height: 48px;
+  background: url("./assets/images/icon48.png");
+  background-size: 100% 100%;
 }

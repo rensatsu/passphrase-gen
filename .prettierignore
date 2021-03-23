@@ -1,0 +1,6 @@
+/dist
+/node_modules
+/.github
+/.parcel-cache
+package.json
+package-lock.json

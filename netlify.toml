@@ -1,0 +1,21 @@
+[build]
+  publish = "dist/"
+  command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = '''
+    default-src 'self';
+    base-uri 'self';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';
+    form-action 'self';
+    connect-src 'self' https://ren-phrase-dict.netlify.app;
+    img-src 'self' data:;
+    '''
