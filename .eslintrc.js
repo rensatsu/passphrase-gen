@@ -6,32 +6,32 @@ module.exports = {
         commonjs: false,
     },
     extends: [
-        'plugin:vue/essential'
+        "plugin:vue/essential"
     ],
     rules: {
-        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'indent': [
-            'error',
+        "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+        "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+        "indent": [
+            "error",
             4,
-            { 'SwitchCase': 1 }
+            { "SwitchCase": 1 }
         ],
-        'linebreak-style': [
-            'error',
-            'unix'
+        "linebreak-style": [
+            "error",
+            "unix"
         ],
-        'quotes': [
-            'error',
-            'single'
+        "quotes": [
+            "error",
+            "double"
         ],
-        'semi': [
-            'error',
-            'always'
+        "semi": [
+            "error",
+            "always"
         ],
-        'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }]
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     },
     parserOptions: {
-        parser: 'babel-eslint',
+        parser: "babel-eslint",
     },
     globals: {}
 };

@@ -1,5 +1,5 @@
-import dictionaries from './load-dictionaries';
-import ucFirst from './uc-first';
+import dictionaries from "./load-dictionaries";
+import ucFirst from "./uc-first";
 
 /**
  * Minimum amount of entries in a dictionary
@@ -37,13 +37,13 @@ const fetchDictionary = (name) => {
         try {
             const dictData = dictionaries.get(name);
             if (!dictData) {
-                throw new Error('Unable to get dictionary information');
+                throw new Error("Unable to get dictionary information");
             }
 
-            const url = new URL('https://ren-phrase-dict.netlify.app/');
+            const url = new URL("https://ren-phrase-dict.netlify.app/");
             url.pathname = dictData.path;
 
-            const resp = await fetch(url, { method: 'GET' });
+            const resp = await fetch(url, { method: "GET" });
 
             const text = await resp.text();
 
@@ -53,7 +53,7 @@ const fetchDictionary = (name) => {
 
             // check if the dictionary is loaded by measuring its length
             if (parsedArray.length < MIN_DICTIONARY_LENGTH) {
-                throw new Error('Dictionary is too short');
+                throw new Error("Dictionary is too short");
             }
 
             // store an array in the cache
@@ -99,7 +99,7 @@ const getRandomDigits = (length) => {
         return getCryptoRandomArbitrary(0, 9);
     });
 
-    return arr.join('');
+    return arr.join("");
 };
 
 /**
@@ -110,14 +110,14 @@ const getRandomDigits = (length) => {
  */
 const convertCase = (str, wCase) => {
     switch (wCase) {
-        case 'lower':
+        case "lower":
             return str.toLowerCase();
-        case 'upper':
+        case "upper":
             return str.toUpperCase();
-        case 'ucfirst':
+        case "ucfirst":
             return ucFirst(str);
         default:
-            throw new Error('Unknown case');
+            throw new Error("Unknown case");
     }
 };
 
@@ -138,20 +138,20 @@ const getRandomPhrase = async ({
     digitsCount = 4,
     minWordLength = 3,
     maxWordLength = 8,
-    wordCase = 'lower',
-    delimiter = '-'
+    wordCase = "lower",
+    delimiter = "-"
 } = {}) => {
     // check params
     if (!dictionary) {
-        throw new Error('Dictionary name is not defined');
+        throw new Error("Dictionary name is not defined");
     }
 
     if (minWordLength > maxWordLength) {
-        throw new Error('Incorrect min or max option');
+        throw new Error("Incorrect min or max option");
     }
 
     if (words <= 0) {
-        throw new Error('Incorrect amount of words');
+        throw new Error("Incorrect amount of words");
     }
 
     // loading the dictionary
@@ -182,7 +182,7 @@ const getRandomPhrase = async ({
 
         // terminate on timeout
         if (performance.now() - startTime > INFINITE_LOOP_TIMEOUT) {
-            throw new Error('Unable to generate password with specified options');
+            throw new Error("Unable to generate password with specified options");
         }
     }
 
@@ -197,8 +197,8 @@ const getRandomPhrase = async ({
 
     // convert case
     phrase = phrase.map((e, idx) => {
-        const nextCase = wordCase === 'random' ?
-            (idx % 2 === randomCaseOffset ? 'lower' : 'upper') : wordCase;
+        const nextCase = wordCase === "random" ?
+            (idx % 2 === randomCaseOffset ? "lower" : "upper") : wordCase;
         return convertCase(e, nextCase);
     });
 

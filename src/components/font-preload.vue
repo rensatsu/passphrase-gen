@@ -18,10 +18,13 @@
 </template>
 
 <script>
+import "typeface-ibm-plex-sans";
+import "typeface-ibm-plex-mono";
+
 export default {
     data() {
         return {
-            testString: 'abcXYZ',
+            testString: "abcXYZ123",
         };
     }
 };
