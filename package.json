@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build ./src/index.html --no-scope-hoist",
     "format": "prettier --write 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
