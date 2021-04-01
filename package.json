@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "@parcel/transformer-vue": "^2.0.0-beta.2",
+    "@parcel/transformer-vue": "^2.0.0-nightly.1973",
     "parcel": "^2.0.0-beta.2",
     "prettier": "^2.2.1"
   }
