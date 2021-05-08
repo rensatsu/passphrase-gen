@@ -18,14 +18,15 @@
 </template>
 
 <script>
+import { defineComponent } from "@vue/runtime-core";
 import "typeface-ibm-plex-sans";
 import "typeface-ibm-plex-mono";
 
-export default {
+export default defineComponent({
   data() {
     return {
       testString: "abcXYZ123",
     };
   },
-};
+});
 </script>

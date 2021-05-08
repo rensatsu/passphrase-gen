@@ -7,13 +7,14 @@
 </template>
 
 <script>
+import { defineComponent } from "@vue/runtime-core";
 import dayjs from "dayjs";
 
-export default {
+export default defineComponent({
   data() {
     return {
       year: dayjs().format("YYYY"),
     };
   },
-};
+});
 </script>

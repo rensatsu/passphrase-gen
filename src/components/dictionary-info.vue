@@ -11,19 +11,28 @@
   </article>
 </template>
 
-<script>
-export default {
-  props: ["dictionaries", "selected"],
-  computed: {
-    name: function () {
-      return this.dictionaries[this.selected].name;
-    },
-    title: function () {
-      return this.dictionaries[this.selected].title;
-    },
-    source: function () {
-      return this.dictionaries[this.selected].source;
+<script lang="ts">
+import { defineComponent } from "@vue/runtime-core";
+import dictionaryList from "../libs/load-dictionaries";
+const dictionaries = dictionaryList.list();
+
+export default defineComponent({
+  props: {
+    selected: {
+      type: String,
+      required: true,
     },
   },
-};
+  computed: {
+    name(): string {
+      return dictionaries.get(this.selected)?.name ?? "";
+    },
+    title(): string {
+      return dictionaries.get(this.selected)?.title ?? "";
+    },
+    source(): string {
+      return dictionaries.get(this.selected)?.source ?? "";
+    },
+  },
+});
 </script>
