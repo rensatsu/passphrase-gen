@@ -39,6 +39,7 @@ $family-monospace: "IBM Plex Mono", monospace;
 @import "../../../node_modules/bulma/sass/grid/columns.sass";
 
 // Helpers
+@import "../../../node_modules/bulma/sass/helpers/other.sass";
 @import "../../../node_modules/bulma/sass/helpers/typography.sass";
 @import "../../../node_modules/bulma/sass/helpers/visibility.sass";
 
