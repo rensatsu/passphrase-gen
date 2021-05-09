@@ -186,7 +186,7 @@ import passwordList from "./components/password-list.vue";
 import dictionaryList from "./libs/load-dictionaries";
 import { Options } from "./libs/settings-storage";
 import delimiters from "./libs/delimiters";
-import wordCases from "./libs/word-cases";
+import { wordCaseNames } from "./libs/word-cases";
 import { getRandomPhrase } from "./libs/phrase-generator";
 import { defineComponent } from "@vue/runtime-core";
 
@@ -205,7 +205,7 @@ export default defineComponent({
     return {
       dictionaries: dictionaries,
       options: options,
-      wordCases: wordCases,
+      wordCases: wordCaseNames,
       delimiters: delimiters,
       result: [],
       locked: false,

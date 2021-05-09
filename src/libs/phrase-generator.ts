@@ -3,6 +3,7 @@ import { upperCaseFirst } from "upper-case-first";
 import IOptions from "./struct/i-options";
 import { getCryptoRandom, getRandomDigits } from "./random-numbers";
 import { getNextWordCase } from "./word-case-generator";
+import { WordCase } from "./word-cases";
 
 /**
  * Minimum amount of entries in a dictionary.
@@ -68,13 +69,13 @@ async function fetchDictionary(name: string): Promise<string[]> {
  * @param {string} wCase Target case, possible values: lower, upper, ucfirst
  * @return {string} Converted string
  */
-function convertCase(str: string, wCase: string): string {
+function convertCase(str: string, wCase: WordCase): string {
   switch (wCase) {
-    case "lower":
+    case WordCase.Lower:
       return str.toLowerCase();
-    case "upper":
+    case WordCase.Upper:
       return str.toUpperCase();
-    case "ucfirst":
+    case WordCase.UcFirst:
       return upperCaseFirst(str);
     default:
       throw new Error("Unknown case");
