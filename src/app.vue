@@ -23,9 +23,9 @@
                     v-model="options.dictionary"
                   >
                     <option
-                      v-for="(dict, code) of dictionaries"
-                      v-bind:key="code"
-                      :value="code"
+                      v-for="[id, dict] of dictionaries"
+                      v-bind:key="id"
+                      :value="id"
                     >
                       {{ dict.name }}
                     </option>
@@ -119,11 +119,11 @@
                     v-model="options.delimiter"
                   >
                     <option
-                      v-for="delim in delimiters"
-                      v-bind:key="delim.value"
-                      :value="delim.value"
+                      v-for="[delimiterTitle, delimiterCode] in delimiters"
+                      :key="delimiterCode"
+                      :value="delimiterCode"
                     >
-                      {{ delim.name }} ({{ delim.value }})
+                      {{ delimiterTitle }} ({{ delimiterCode }})
                     </option>
                   </select>
                 </div>
@@ -157,18 +157,16 @@
             </div>
           </form>
         </div>
-        <div class="column" v-if="result === null">
+        <div class="column" v-if="result?.length === 0">
           <About></About>
           <SourceCode></SourceCode>
-          <DictionaryInfo
-            v-bind:dictionaries="dictionaries"
-            v-bind:selected="options.dictionary"
-          ></DictionaryInfo>
+          <DictionaryInfo v-bind:selected="options.dictionary"></DictionaryInfo>
         </div>
         <PasswordList
           v-else
           v-bind:error="error"
           v-bind:result="result"
+          @reset="reset"
         ></PasswordList>
       </div>
     </div>
@@ -176,59 +174,42 @@
   <Footer></Footer>
 </template>
 
-<script>
-import fontPreload from "./components/font-preload";
-import footer from "./components/footer";
-import about from "./components/about";
-import sourceCode from "./components/source-code";
-import dictionaryInfo from "./components/dictionary-info";
-import header from "./components/header";
-import passwordList from "./components/password-list";
+<script lang="ts">
+import fontPreload from "./components/font-preload.vue";
+import footer from "./components/footer.vue";
+import about from "./components/about.vue";
+import sourceCode from "./components/source-code.vue";
+import dictionaryInfo from "./components/dictionary-info.vue";
+import header from "./components/header.vue";
+import passwordList from "./components/password-list.vue";
 
 import dictionaryList from "./libs/load-dictionaries";
-import phraseGenerator from "./libs/phrase-generator";
-import { load as settingsLoad, save as settingsSave } from "./libs/settings-storage";
+import { Options } from "./libs/settings-storage";
 import delimiters from "./libs/delimiters";
 import wordCases from "./libs/word-cases";
+import { getRandomPhrase } from "./libs/phrase-generator";
+import { defineComponent } from "@vue/runtime-core";
 
 // load settings from url
-const lSettings = settingsLoad();
+const options = new Options();
 
 // load dictionaries list
 const dictionaries = dictionaryList.list();
-const defaultDictCode = Object.values(dictionaries)[0].code;
 
-// default set of options
-const options = {
-  dictionary: defaultDictCode,
-  words: 3,
-  digits: 4,
-  minWordLength: 3,
-  maxWordLength: 8,
-  wordCase: "lower",
-  delimiter: "-",
-  count: 1,
-};
-
-// merge options from settings-storage
-if (lSettings !== null) {
-  Object.keys(options).forEach((key) => {
-    if (key in lSettings) {
-      options[key] = lSettings[key];
-    }
-  });
+if (!options.dictionary) {
+  options.dictionary = dictionaries.keys().next().value;
 }
 
-export default {
+export default defineComponent({
   data() {
     return {
       dictionaries: dictionaries,
       options: options,
       wordCases: wordCases,
       delimiters: delimiters,
-      result: null,
+      result: [],
       locked: false,
-      error: null,
+      error: undefined,
     };
   },
   components: {
@@ -242,32 +223,28 @@ export default {
   },
   methods: {
     reset() {
-      this.result = null;
-      this.error = null;
+      this.result = [];
+      this.error = undefined;
     },
     async update() {
       this.locked = true;
-      this.error = null;
+      this.error = undefined;
 
       try {
         for (let i = 0; i < this.options.count; i++) {
-          const rnd = await phraseGenerator({
+          const rnd = await getRandomPhrase({
             dictionary: this.options.dictionary,
             words: this.options.words,
-            digitsCount: this.options.digits,
+            digits: this.options.digits,
             minWordLength: this.options.minWordLength,
             maxWordLength: this.options.maxWordLength,
             wordCase: this.options.wordCase,
             delimiter: this.options.delimiter,
           });
 
-          settingsSave(this.options);
+          this.options.save();
 
-          if (this.result === null) {
-            this.result = [];
-          }
-
-          this.result.unshift(rnd);
+          this.result.unshift(rnd as never);
         }
       } catch (e) {
         this.error = e.message;
@@ -276,5 +253,5 @@ export default {
       this.locked = false;
     },
   },
-};
+});
 </script>
