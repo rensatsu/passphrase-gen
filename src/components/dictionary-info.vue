@@ -5,7 +5,7 @@
       <h3 class="mb-1">{{ name }}</h3>
       <p>{{ title }}</p>
       <p>
-        <a :href="source" rel="nofollow" target="_blank">Source</a>
+        <a :href="source" target="_blank" rel="nofollow noopener">Source</a>
       </p>
     </div>
   </article>

@@ -11,7 +11,7 @@
         Also, you have an option to add a few digits to make it more secure.
       </div>
       <div>
-        <a href="https://xkcd.com/936/" target="_blank"
+        <a href="https://xkcd.com/936/" target="_blank" rel="nofollow noopener"
           >Check out the xkcd comic about password strength</a
         >.
       </div>
