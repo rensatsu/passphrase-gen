@@ -13,7 +13,7 @@
     Content-Security-Policy = '''
     default-src 'self';
     base-uri 'self';
-    style-src 'self' 'unsafe-inline';
+    style-src 'self';
     object-src 'none';
     form-action 'self';
     connect-src 'self' https://ren-phrase-dict.netlify.app;
