@@ -1,3 +1,5 @@
+import { WordCase } from "../word-cases";
+
 interface IOptions {
   /**
    * A dictionary to use.
@@ -42,10 +44,10 @@ interface IOptions {
   /**
    * Word case (allowed: lower, upper, ucfirst, random).
    *
-   * @type {string}
+   * @type {WordCase}
    * @memberof IOptions
    */
-  wordCase: string;
+  wordCase: WordCase;
 
   /**
    * A delimiter between parts of a phrase.

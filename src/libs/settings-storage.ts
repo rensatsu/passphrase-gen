@@ -1,6 +1,7 @@
 /** A module to load and save form parameters in query string */
 
 import IOptions from "./struct/i-options";
+import { WordCase } from "./word-cases";
 
 class Options implements IOptions {
   dictionary: string = "";
@@ -8,7 +9,7 @@ class Options implements IOptions {
   digits: number = 4;
   minWordLength: number = 3;
   maxWordLength: number = 8;
-  wordCase: string = "lower";
+  wordCase: WordCase = WordCase.Lower;
   delimiter: string = "-";
   count: number = 1;
 
@@ -33,7 +34,7 @@ class Options implements IOptions {
           this.maxWordLength = parseInt(val);
           break;
         case "wordCase":
-          this.wordCase = val;
+          this.wordCase = val as WordCase;
           break;
         case "delimiter":
           this.delimiter = val;

@@ -1,10 +1,23 @@
 /** A module for a list of word cases in a passphrase */
 
-const wordCases = {
-  lower: "lower case",
-  upper: "UPPER CASE",
-  ucfirst: "Upper Case First Letter",
-  random: "RANDOM case",
+/**
+ * Word Case enum.
+ *
+ * @constant
+ * @enum {number}
+ */
+const enum WordCase {
+  Lower = "lower",
+  Upper = "upper",
+  UcFirst = "ucfirst",
+  Random = "random",
+}
+
+const wordCaseNames = {
+  [WordCase.Lower]: "lower case",
+  [WordCase.Upper]: "UPPER CASE",
+  [WordCase.UcFirst]: "Upper Case First Letter",
+  [WordCase.Random]: "RANDOM case",
 };
 
-export default wordCases;
+export { WordCase, wordCaseNames };
