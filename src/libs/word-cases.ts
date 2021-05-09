@@ -3,9 +3,10 @@
 /**
  * Word Case enum.
  *
+ * @constant
  * @enum {number}
  */
-enum WordCase {
+const enum WordCase {
   Lower = "lower",
   Upper = "upper",
   UcFirst = "ucfirst",
