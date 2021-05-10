@@ -37,9 +37,10 @@ import { defineComponent } from "@vue/runtime-core";
 import delay from "delay";
 
 // loading fontawesome icons
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 import Icon from "./icon.vue";
+config.autoAddCss = false; // fix CSP issues
 library.add(faCopy, faCheck);
 
 export default defineComponent({
