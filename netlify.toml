@@ -7,14 +7,16 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "origin-when-cross-origin"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=31536000"
+    Permissions-Policy = "interest-cohort=()"
     Content-Security-Policy = '''
-    default-src 'self';
+    default-src 'none';
     base-uri 'self';
+    script-src 'self';
     style-src 'self';
-    object-src 'none';
+    font-src 'self';
     form-action 'self';
     connect-src 'self' https://ren-phrase-dict.netlify.app;
     img-src 'self' data:;
