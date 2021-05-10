@@ -1,15 +1,31 @@
 <template>
-  <h2 class="subtitle">Dictionary information</h2>
-  <article class="message">
-    <div class="message-body">
-      <h3 class="mb-1">{{ name }}</h3>
+  <article class="panel panel-compact">
+    <h2 class="panel-heading">Dictionary information</h2>
+    <div class="panel-body">
+      <h3>{{ name }}</h3>
       <p>{{ title }}</p>
-      <p>
-        <a :href="source" target="_blank" rel="nofollow noopener">Source</a>
-      </p>
+    </div>
+    <div class="panel-footer">
+      <a :href="source" target="_blank" rel="nofollow noopener">Source</a>
     </div>
   </article>
 </template>
+
+<style lang="scss" scoped>
+.panel {
+  & > .panel-body {
+    & > h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    & > p {
+      margin: 0;
+    }
+  }
+}
+</style>
 
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core";

@@ -1,177 +1,149 @@
 <style lang="scss">
-@import "./assets/stylesheets/bulma";
-@import "./assets/stylesheets/app";
+@import "./assets/stylesheets/blueberry.scss";
+@import "./assets/stylesheets/app.scss";
+
+.container {
+  width: 95%;
+}
 </style>
 
 <template>
-  <section class="section">
-    <div class="container">
-      <Header></Header>
-      <div class="columns">
-        <div class="column">
-          <FontPreload></FontPreload>
-          <form @submit.prevent="update">
-            <h2 class="subtitle">Parameters</h2>
-
-            <div class="field">
-              <label for="sel-dictionary" class="label">Dictionary</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select
-                    class="input is-shadowless"
-                    id="sel-dictionary"
-                    v-model="options.dictionary"
-                  >
-                    <option
-                      v-for="[id, dict] of dictionaries"
-                      v-bind:key="id"
-                      :value="id"
-                    >
-                      {{ dict.name }}
-                    </option>
-                  </select>
-                </div>
-              </div>
+  <Header class="container"></Header>
+  <main class="container">
+    <div class="grid grid--1-1 grid-mobile--1">
+      <div>
+        <FontPreload></FontPreload>
+        <form @submit.prevent="update">
+          <div class="form-group">
+            <label for="sel-dictionary">Dictionary</label>
+            <select
+              class="form-control"
+              id="sel-dictionary"
+              v-model="options.dictionary"
+            >
+              <option
+                v-for="[id, dict] of dictionaries"
+                v-bind:key="id"
+                :value="id"
+              >
+                {{ dict.name }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inp-words">Words count</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inp-words"
+              v-model.number="options.words"
+              min="0"
+              max="20"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inp-digits">Digits count</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inp-digits"
+              v-model.number="options.digits"
+              min="0"
+              max="20"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inp-min-length">Minimum word length</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inp-min-length"
+              v-model.number="options.minWordLength"
+              min="1"
+              max="15"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inp-max-length">Maximum word length</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inp-max-length"
+              v-model.number="options.maxWordLength"
+              min="1"
+              max="15"
+            />
+          </div>
+          <div class="form-group">
+            <label for="sel-case">Word case</label>
+            <select
+              class="form-control"
+              id="sel-case"
+              v-model="options.wordCase"
+            >
+              <option
+                v-for="(name, code) of wordCases"
+                v-bind:key="name"
+                :value="code"
+              >
+                {{ name }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sel-delimiter">Delimiter</label>
+            <select
+              class="form-control"
+              id="sel-delimiter"
+              v-model="options.delimiter"
+            >
+              <option
+                v-for="[delimiterTitle, delimiterCode] in delimiters"
+                :key="delimiterCode"
+                :value="delimiterCode"
+              >
+                {{ delimiterTitle }} ({{ delimiterCode }})
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inp-phrases-count">Phrases to generate</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inp-phrases-count"
+              v-model.number="options.count"
+              min="1"
+              max="30"
+            />
+          </div>
+          <div class="form-group">
+            <div class="control">
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                :disabled="locked"
+              >
+                Generate
+              </button>
             </div>
-            <div class="field">
-              <label for="inp-words" class="label">Words count</label>
-              <div class="control">
-                <input
-                  type="number"
-                  class="input is-shadowless"
-                  id="inp-words"
-                  v-model.number="options.words"
-                  min="0"
-                  max="20"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label for="inp-digits" class="label">Digits count</label>
-              <div class="control">
-                <input
-                  type="number"
-                  class="input is-shadowless"
-                  id="inp-digits"
-                  v-model.number="options.digits"
-                  min="0"
-                  max="20"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label for="inp-min-length" class="label">
-                Minimum word length
-              </label>
-              <div class="control">
-                <input
-                  type="number"
-                  class="input is-shadowless"
-                  id="inp-min-length"
-                  v-model.number="options.minWordLength"
-                  min="1"
-                  max="15"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label for="inp-max-length" class="label">
-                Maximum word length
-              </label>
-              <div class="control">
-                <input
-                  type="number"
-                  class="input is-shadowless"
-                  id="inp-max-length"
-                  v-model.number="options.maxWordLength"
-                  min="1"
-                  max="15"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label for="sel-case" class="label">Word case</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select
-                    class="input is-shadowless"
-                    id="sel-case"
-                    v-model="options.wordCase"
-                  >
-                    <option
-                      v-for="(name, code) of wordCases"
-                      v-bind:key="name"
-                      :value="code"
-                    >
-                      {{ name }}
-                    </option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <label for="sel-delimiter" class="label">Delimiter</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select
-                    class="input is-shadowless"
-                    id="sel-delimiter"
-                    v-model="options.delimiter"
-                  >
-                    <option
-                      v-for="[delimiterTitle, delimiterCode] in delimiters"
-                      :key="delimiterCode"
-                      :value="delimiterCode"
-                    >
-                      {{ delimiterTitle }} ({{ delimiterCode }})
-                    </option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <label for="inp-phrases-count" class="label">
-                Phrases to generate
-              </label>
-              <div class="control">
-                <input
-                  type="number"
-                  class="input is-shadowless"
-                  id="inp-phrases-count"
-                  v-model.number="options.count"
-                  min="1"
-                  max="30"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <button
-                  type="submit"
-                  class="button is-primary"
-                  :disabled="locked"
-                >
-                  Generate
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="column" v-if="result?.length === 0">
-          <About></About>
-          <SourceCode></SourceCode>
-          <DictionaryInfo v-bind:selected="options.dictionary"></DictionaryInfo>
-        </div>
-        <PasswordList
-          v-else
-          v-bind:error="error"
-          v-bind:result="result"
-          @reset="reset"
-        ></PasswordList>
+          </div>
+        </form>
       </div>
+      <div v-if="result?.length === 0">
+        <About></About>
+        <SourceCode></SourceCode>
+        <DictionaryInfo v-bind:selected="options.dictionary"></DictionaryInfo>
+      </div>
+      <PasswordList
+        v-else
+        v-bind:error="error"
+        v-bind:result="result"
+        @reset="reset"
+      ></PasswordList>
     </div>
-  </section>
-  <Footer></Footer>
+  </main>
+  <Footer class="container"></Footer>
 </template>
 
 <script lang="ts">

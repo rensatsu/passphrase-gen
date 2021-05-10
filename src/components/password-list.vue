@@ -1,18 +1,26 @@
 <template>
-  <div class="column">
-    <h2 class="subtitle">Result</h2>
-    <article class="message is-danger" v-if="error && error !== null">
-      <div class="message-body">{{ error }}</div>
+  <div>
+    <article class="panel">
+      <h2 class="panel-heading">Result</h2>
+      <div class="panel-body" v-if="error && error !== null">
+        <article class="alert alert-danger" v-if="error && error !== null">
+          {{ error }}
+        </article>
+      </div>
+      <div v-else class="list-group" v-for="line in result" v-bind:key="line">
+        <PasswordItem :password="line"></PasswordItem>
+      </div>
+
+      <div class="panel-footer">
+        <button @click="reset" class="btn btn-small">Reset</button>
+      </div>
     </article>
-    <pre><code v-for="line in result" v-bind:key="line" class="is-block">{{ line }}</code></pre>
-    <div class="mt-1">
-      <button @click="reset" class="button">Reset</button>
-    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/runtime-core";
+import passwordItem from "./password-item.vue";
 
 export default defineComponent({
   props: {
@@ -20,13 +28,17 @@ export default defineComponent({
     result: {
       type: Array as PropType<Array<string>>,
       default: [],
-    }
+    },
+  },
+
+  components: {
+    PasswordItem: passwordItem,
   },
 
   methods: {
     reset(): void {
       this.$emit("reset");
-    }
-  }
+    },
+  },
 });
 </script>

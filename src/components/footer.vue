@@ -1,10 +1,19 @@
 <template>
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>&copy; Rensatsu {{ year }}</p>
-    </div>
+  <footer>
+    <p class="text-center">&copy; Rensatsu {{ year }}</p>
   </footer>
 </template>
+
+<style lang="scss" scoped>
+footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  & > p {
+    margin: 0;
+  }
+}
+</style>
 
 <script>
 import { defineComponent } from "@vue/runtime-core";
