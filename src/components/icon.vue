@@ -2,6 +2,10 @@
   <FontAwesomeIcon :icon="icon" fixed-width></FontAwesomeIcon>
 </template>
 
+<style lang="scss">
+@import url("../../node_modules/@fortawesome/fontawesome-svg-core/styles.css");
+</style>
+
 <script lang="ts">
 import {
   FontAwesomeIcon,
