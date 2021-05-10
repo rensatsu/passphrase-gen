@@ -1,7 +1,7 @@
 <template>
-  <h2 class="subtitle">What is it?</h2>
-  <article class="message">
-    <div class="message-body">
+  <article class="panel panel-compact">
+    <h2 class="panel-heading">What is it?</h2>
+    <div class="panel-body">
       <div>This is a password phrase generator.</div>
       <div>
         It generates a password phrase based on words from the selected

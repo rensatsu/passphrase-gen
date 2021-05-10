@@ -1,7 +1,7 @@
 <template>
-  <h2 class="subtitle">Source code</h2>
-  <article class="message">
-    <div class="message-body">
+  <article class="panel panel-compact">
+    <div class="panel-heading">Source code</div>
+    <div class="panel-body">
       Source code is availabe on
       <a
         href="https://github.com/rensatsu/passphrase-gen"

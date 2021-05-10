@@ -1,25 +1,19 @@
 @charset "utf-8";
 
+.is-block {
+  display: block;
+}
+
 .mt-1 {
-  margin-top: 1rem !important;
+  margin-top: 1rem;
 }
 
-.mb-1 {
-  margin-bottom: 1rem !important;
-}
+.panel.panel-compact {
+  & > .panel-heading {
+    padding-bottom: 0;
+  }
 
-.ml-1 {
-  margin-left: 1rem !important;
-}
-
-header {
-  display: flex;
-  align-items: center;
-}
-
-.app-icon {
-  width: 48px;
-  height: 48px;
-  background: url("./assets/images/icon48.png");
-  background-size: 100% 100%;
+  & > .panel-footer {
+    padding-top: 0;
+  }
 }
