@@ -2,8 +2,8 @@
   <div class="list-group-item" href="#">
     <pre><code>{{ password }}</code></pre>
     <a href="#" @click.prevent="copy(password)" title="Copy" :hidden="hide">
-      <Icon :icon="['fas', 'copy']" v-if="!copied"></Icon>
-      <Icon :icon="['fas', 'check']" v-else></Icon>
+      <ClipboardIcon class="icon" v-if="!copied"></ClipboardIcon>
+      <ClipboardCheckIcon class="icon" v-else></ClipboardCheckIcon>
     </a>
   </div>
 </template>
@@ -19,6 +19,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      & > .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
     }
   }
 }
@@ -36,12 +41,8 @@ pre {
 import { defineComponent } from "@vue/runtime-core";
 import delay from "delay";
 
-// loading fontawesome icons
-import { library, config } from "@fortawesome/fontawesome-svg-core";
-import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
-import Icon from "./icon.vue";
-config.autoAddCss = false; // fix CSP issues
-library.add(faCopy, faCheck);
+// loading icons
+import { ClipboardIcon, ClipboardCheckIcon } from "@heroicons/vue/outline";
 
 export default defineComponent({
   data() {
@@ -59,7 +60,8 @@ export default defineComponent({
   },
 
   components: {
-    Icon: Icon,
+    ClipboardIcon: ClipboardIcon,
+    ClipboardCheckIcon: ClipboardCheckIcon,
   },
 
   methods: {
