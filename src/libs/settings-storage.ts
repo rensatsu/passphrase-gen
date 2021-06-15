@@ -12,6 +12,7 @@ class Options implements IOptions {
   wordCase: WordCase = WordCase.Lower;
   delimiter: string = "-";
   count: number = 1;
+  isAdvanced: boolean = false;
 
   constructor() {
     const sp = new URLSearchParams(location.search);
@@ -42,6 +43,8 @@ class Options implements IOptions {
         case "count":
           this.count = parseInt(val);
           break;
+        case "isAdvanced":
+          this.isAdvanced = !!parseInt(val);
       }
     });
   }
@@ -57,6 +60,7 @@ class Options implements IOptions {
     sp.set("wordCase", this.wordCase);
     sp.set("delimiter", this.delimiter);
     sp.set("count", this.count.toString());
+    sp.set("isAdvanced", (+this.isAdvanced).toString());
 
     history.replaceState({}, document.title, "?" + sp.toString());
   }

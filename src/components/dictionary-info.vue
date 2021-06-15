@@ -1,17 +1,29 @@
 <template>
   <article class="panel panel-compact">
-    <h2 class="panel-heading">Dictionary information</h2>
+    <h2 class="panel-heading">Dictionary Info</h2>
     <div class="panel-body">
-      <h3>{{ name }}</h3>
-      <p>{{ title }}</p>
-    </div>
-    <div class="panel-footer">
-      <a :href="source" target="_blank" rel="nofollow noopener">Source</a>
+      <div>
+        <a
+          :href="source"
+          target="_blank"
+          rel="noopener"
+          title="Source"
+        >
+          <ExternalLinkIcon class="icon"></ExternalLinkIcon>
+        </a>
+        {{ title }}
+      </div>
     </div>
   </article>
 </template>
 
 <style lang="scss" scoped>
+.icon {
+  width: 1.25rem;
+  float: right;
+  margin: 0 0 1ch 1ch;
+}
+
 .panel {
   & > .panel-body {
     & > h3 {
@@ -30,6 +42,8 @@
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
 import dictionaryList from "../libs/load-dictionaries";
+import ExternalLinkIcon from "@heroicons/vue/outline/ExternalLinkIcon.js";
+
 const dictionaries = dictionaryList.list();
 
 export default defineComponent({
@@ -39,6 +53,7 @@ export default defineComponent({
       required: true,
     },
   },
+
   computed: {
     name(): string {
       return dictionaries.get(this.selected)?.name ?? "";
@@ -49,6 +64,10 @@ export default defineComponent({
     source(): string {
       return dictionaries.get(this.selected)?.source ?? "";
     },
+  },
+
+  components: {
+    ExternalLinkIcon,
   },
 });
 </script>
