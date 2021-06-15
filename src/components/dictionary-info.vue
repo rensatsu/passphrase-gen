@@ -3,7 +3,12 @@
     <h2 class="panel-heading">Dictionary Info</h2>
     <div class="panel-body">
       <div>
-        <a :href="source" target="_blank" rel="nofollow noopener">
+        <a
+          :href="source"
+          target="_blank"
+          rel="nofollow noopener"
+          title="Source"
+        >
           <ExternalLinkIcon class="icon"></ExternalLinkIcon>
         </a>
         {{ title }}
@@ -63,6 +68,6 @@ export default defineComponent({
 
   components: {
     ExternalLinkIcon,
-  }
+  },
 });
 </script>
