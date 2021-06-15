@@ -76,7 +76,7 @@ details > summary {
           </div>
           <div class="form-group" v-if="options.isAdvanced">
             <label for="inp-min-length">Word length</label>
-            <div class="grid grid--1-1">
+            <div class="grid grid-mobile--1-1 grid--1-1">
                 <input
                   type="number"
                   class="form-control"
