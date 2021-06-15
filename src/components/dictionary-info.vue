@@ -6,7 +6,7 @@
         <a
           :href="source"
           target="_blank"
-          rel="nofollow noopener"
+          rel="noopener"
           title="Source"
         >
           <ExternalLinkIcon class="icon"></ExternalLinkIcon>
