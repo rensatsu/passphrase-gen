@@ -12,7 +12,7 @@
       </div>
 
       <div class="panel-footer">
-        <button @click="reset" class="btn btn-small">Reset</button>
+        <button @click="reset" class="btn btn-small">Clear results</button>
       </div>
     </article>
   </div>
