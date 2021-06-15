@@ -31,7 +31,7 @@ collection.add(
     code: "eff-short1",
     name: "EFF Short 1",
     path: "eff_short_wordlist_1.txt",
-    title: "EFF's New Wordlists for Random Passphrases.",
+    title: "EFF's New Wordlists for Random Passphrases (general short word).",
     source:
       "https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases",
   })

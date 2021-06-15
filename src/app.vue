@@ -5,6 +5,11 @@
 .container {
   width: 95%;
 }
+
+details > summary {
+  user-select: none;
+  cursor: pointer;
+}
 </style>
 
 <template>
@@ -17,7 +22,7 @@
           <div class="form-group">
             <label for="sel-dictionary">Dictionary</label>
             <select
-              class="form-control"
+              class="form-control form-group"
               id="sel-dictionary"
               v-model="options.dictionary"
             >
@@ -29,8 +34,25 @@
                 {{ dict.name }}
               </option>
             </select>
+            <DictionaryInfo
+              v-bind:selected="options.dictionary"
+            ></DictionaryInfo>
           </div>
-          <div class="form-group">
+
+          <button
+            type="button"
+            class="btn btn-block form-group"
+            @click.prevent="toggleAdvanced"
+          >
+            <template v-if="options.isAdvanced">
+              Hide advanced options
+            </template>
+            <template v-else>
+              Show advanced options
+            </template>
+          </button>
+
+          <div class="form-group" v-if="options.isAdvanced">
             <label for="inp-words">Words count</label>
             <input
               type="number"
@@ -41,7 +63,7 @@
               max="20"
             />
           </div>
-          <div class="form-group">
+          <div class="form-group" v-if="options.isAdvanced">
             <label for="inp-digits">Digits count</label>
             <input
               type="number"
@@ -52,29 +74,30 @@
               max="20"
             />
           </div>
-          <div class="form-group">
-            <label for="inp-min-length">Minimum word length</label>
-            <input
-              type="number"
-              class="form-control"
-              id="inp-min-length"
-              v-model.number="options.minWordLength"
-              min="1"
-              max="15"
-            />
+          <div class="form-group" v-if="options.isAdvanced">
+            <label for="inp-min-length">Word length</label>
+            <div class="grid grid--1-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inp-min-length"
+                  v-model.number="options.minWordLength"
+                  min="1"
+                  max="15"
+                  placeholder="Min word length"
+                />
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inp-max-length"
+                  v-model.number="options.maxWordLength"
+                  min="1"
+                  max="15"
+                  placeholder="Max word length"
+                />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="inp-max-length">Maximum word length</label>
-            <input
-              type="number"
-              class="form-control"
-              id="inp-max-length"
-              v-model.number="options.maxWordLength"
-              min="1"
-              max="15"
-            />
-          </div>
-          <div class="form-group">
+          <div class="form-group" v-if="options.isAdvanced">
             <label for="sel-case">Word case</label>
             <select
               class="form-control"
@@ -90,7 +113,7 @@
               </option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group" v-if="options.isAdvanced">
             <label for="sel-delimiter">Delimiter</label>
             <select
               class="form-control"
@@ -106,7 +129,7 @@
               </option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group" v-if="options.isAdvanced">
             <label for="inp-phrases-count">Phrases to generate</label>
             <input
               type="number"
@@ -117,6 +140,7 @@
               max="30"
             />
           </div>
+
           <div class="form-group">
             <div class="control">
               <button
@@ -130,10 +154,9 @@
           </div>
         </form>
       </div>
-      <div v-if="result?.length === 0">
+      <div v-if="result?.length === 0 && !error">
         <About></About>
         <SourceCode></SourceCode>
-        <DictionaryInfo v-bind:selected="options.dictionary"></DictionaryInfo>
       </div>
       <PasswordList
         v-else
@@ -147,13 +170,13 @@
 </template>
 
 <script lang="ts">
-import fontPreload from "./components/font-preload.vue";
-import footer from "./components/footer.vue";
-import about from "./components/about.vue";
-import sourceCode from "./components/source-code.vue";
-import dictionaryInfo from "./components/dictionary-info.vue";
-import header from "./components/header.vue";
-import passwordList from "./components/password-list.vue";
+import FontPreload from "./components/font-preload.vue";
+import Footer from "./components/footer.vue";
+import About from "./components/about.vue";
+import SourceCode from "./components/source-code.vue";
+import DictionaryInfo from "./components/dictionary-info.vue";
+import Header from "./components/header.vue";
+import PasswordList from "./components/password-list.vue";
 
 import dictionaryList from "./libs/load-dictionaries";
 import { Options } from "./libs/settings-storage";
@@ -185,15 +208,18 @@ export default defineComponent({
     };
   },
   components: {
-    FontPreload: fontPreload,
-    Footer: footer,
-    About: about,
-    SourceCode: sourceCode,
-    DictionaryInfo: dictionaryInfo,
-    Header: header,
-    PasswordList: passwordList,
+    FontPreload,
+    Footer,
+    About,
+    SourceCode,
+    DictionaryInfo,
+    Header,
+    PasswordList,
   },
   methods: {
+    toggleAdvanced() {
+      this.options.isAdvanced = !this.options.isAdvanced;
+    },
     reset() {
       this.result = [];
       this.error = undefined;

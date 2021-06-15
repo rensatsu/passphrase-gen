@@ -64,6 +64,14 @@ interface IOptions {
    * @memberof IOptions
    */
   count?: number;
+
+  /**
+   * Show advanced options UI.
+   *
+   * @type {boolean}
+   * @memberof IOptions
+   */
+  isAdvanced?: boolean;
 }
 
 export default IOptions;
