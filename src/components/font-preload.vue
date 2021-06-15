@@ -19,8 +19,8 @@
 
 <script>
 import { defineComponent } from "@vue/runtime-core";
-import "typeface-ibm-plex-sans";
-import "typeface-ibm-plex-mono";
+import "@fontsource/public-sans/variable.css";
+import "@fontsource/ibm-plex-mono/400.css";
 
 export default defineComponent({
   data() {

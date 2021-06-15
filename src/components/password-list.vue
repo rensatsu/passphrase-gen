@@ -18,6 +18,12 @@
   </div>
 </template>
 
+<style lang="scss" scoped>
+.list-group {
+  --list-padding: 1rem 1.25rem;
+}
+</style>
+
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/runtime-core";
 import passwordItem from "./password-item.vue";
