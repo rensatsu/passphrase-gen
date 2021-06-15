@@ -1,6 +1,8 @@
 <template>
   <footer>
-    <p class="text-center">&copy; Rensatsu {{ year }}</p>
+    <p class="text-center">
+      Created by <a :href="url" target="_blank" rel="noopener">Rensatsu</a>
+    </p>
   </footer>
 </template>
 
@@ -23,6 +25,7 @@ export default defineComponent({
   data() {
     return {
       year: dayjs().format("YYYY"),
+      url: "https://rensatsu.netlify.app",
     };
   },
 });
