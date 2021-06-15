@@ -42,7 +42,7 @@
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
 import dictionaryList from "../libs/load-dictionaries";
-import { ExternalLinkIcon } from "@heroicons/vue/outline";
+import { default as ExternalLinkIcon } from "@heroicons/vue/outline/ExternalLinkIcon";
 
 const dictionaries = dictionaryList.list();
 
