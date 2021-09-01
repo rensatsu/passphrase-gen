@@ -105,8 +105,8 @@ details > summary {
               v-model="options.wordCase"
             >
               <option
-                v-for="(name, code) of wordCases"
-                v-bind:key="name"
+                v-for="[code, name] in wordCases"
+                :key="code"
                 :value="code"
               >
                 {{ name }}
@@ -184,6 +184,7 @@ import delimiters from "./libs/delimiters";
 import { wordCaseNames } from "./libs/word-cases";
 import { getRandomPhrase } from "./libs/phrase-generator";
 import { defineComponent } from "@vue/runtime-core";
+import IAppComponentData from "./libs/struct/i-app-component-data";
 
 // load settings from url
 const options = new Options();
@@ -205,7 +206,7 @@ export default defineComponent({
       result: [],
       locked: false,
       error: undefined,
-    };
+    } as IAppComponentData;
   },
   components: {
     FontPreload,
@@ -244,8 +245,12 @@ export default defineComponent({
 
           this.result.unshift(rnd as never);
         }
-      } catch (e) {
-        this.error = e.message;
+      } catch (e: unknown) {
+        if (e instanceof Error) {
+          this.error = e.message;
+        } else {
+          this.error = "Unknown error";
+        }
       }
 
       this.locked = false;

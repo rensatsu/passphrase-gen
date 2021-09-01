@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/runtime-core";
-import passwordItem from "./password-item.vue";
+import PasswordItem from "./password-item.vue";
 
 export default defineComponent({
   props: {
@@ -38,7 +38,7 @@ export default defineComponent({
   },
 
   components: {
-    PasswordItem: passwordItem,
+    PasswordItem,
   },
 
   methods: {

@@ -60,8 +60,8 @@ export default defineComponent({
   },
 
   components: {
-    ClipboardIcon: ClipboardIcon,
-    ClipboardCheckIcon: ClipboardCheckIcon,
+    ClipboardIcon,
+    ClipboardCheckIcon,
   },
 
   methods: {

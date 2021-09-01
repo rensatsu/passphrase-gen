@@ -13,11 +13,11 @@ const enum WordCase {
   Random = "random",
 }
 
-const wordCaseNames = {
-  [WordCase.Lower]: "lower case",
-  [WordCase.Upper]: "UPPER CASE",
-  [WordCase.UcFirst]: "Upper Case First Letter",
-  [WordCase.Random]: "RANDOM case",
-};
+const wordCaseNames = new Map([
+  [WordCase.Lower, "lower case"],
+  [WordCase.Upper, "UPPER CASE"],
+  [WordCase.UcFirst, "Upper Case First Letter"],
+  [WordCase.Random, "RANDOM case"],
+]) as Map<WordCase, string>;
 
 export { WordCase, wordCaseNames };
