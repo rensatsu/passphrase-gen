@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.5.1",
     "@fontsource/public-sans": "^4.5.0",
-    "@heroicons/vue": "^1.0.1",
+    "@heroicons/vue": "^1.0.4",
     "@rensatsu/blueberry-css": "^1.7.0",
     "dayjs": "^1.10.6",
     "delay": "^5.0.0",
