@@ -2,10 +2,6 @@
 @import "./assets/stylesheets/blueberry.scss";
 @import "./assets/stylesheets/app.scss";
 
-.container {
-  width: 95%;
-}
-
 details > summary {
   user-select: none;
   cursor: pointer;

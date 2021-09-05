@@ -11,7 +11,8 @@
 
 <style lang="scss" scoped>
 header {
-  margin: 2rem auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 h1 > a {
