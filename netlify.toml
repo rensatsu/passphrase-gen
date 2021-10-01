@@ -21,3 +21,11 @@
     connect-src 'self' https://ren-phrase-dict.netlify.app;
     img-src 'self' data:;
     '''
+
+[[redirects]]
+  from = "/dict/*"
+  to = "https://ren-phrase-dict.netlify.app/dict/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"

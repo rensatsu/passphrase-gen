@@ -38,8 +38,7 @@ async function fetchDictionary(name: string): Promise<string[]> {
     throw new Error("Unable to get dictionary information");
   }
 
-  const url = new URL("https://ren-phrase-dict.netlify.app/");
-  url.pathname = dictData.path;
+  const url = new URL(`/dict/${dictData.path}`, location.href);
 
   const resp = await fetch(url.toString());
   if (!resp.ok) {

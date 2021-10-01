@@ -7,4 +7,12 @@ export default defineConfig({
   build: {
     polyfillDynamicImport: false,
   },
+  server: {
+    proxy: {
+      "/dict": {
+        target: "https://ren-phrase-dict.netlify.app",
+        changeOrigin: true,
+      },
+    },
+  },
 });
