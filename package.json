@@ -12,7 +12,7 @@
     "@fontsource/ibm-plex-mono": "^4.5.1",
     "@fontsource/public-sans": "^4.5.0",
     "@heroicons/vue": "^1.0.5",
-    "@rensatsu/blueberry-css": "^1.8.4",
+    "@rensatsu/blueberry-css": "^1.8.5",
     "dayjs": "^1.10.7",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
