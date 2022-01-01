@@ -19,7 +19,7 @@
     "vue": "^3.2.23"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.10.1",
+    "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.2.20",
     "prettier": "^2.5.1",
     "sass": "^1.44.0",
