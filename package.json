@@ -9,14 +9,14 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-mono": "^4.5.1",
+    "@fontsource/ibm-plex-mono": "^4.5.2",
     "@fontsource/public-sans": "^4.5.0",
     "@heroicons/vue": "^1.0.5",
     "@rensatsu/blueberry-css": "^1.8.5",
     "dayjs": "^1.10.7",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
-    "vue": "^3.2.23"
+    "vue": "^3.2.29"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.1",
