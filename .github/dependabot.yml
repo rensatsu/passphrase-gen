@@ -10,5 +10,3 @@ updates:
     schedule:
       interval: "monthly"
       time: "11:00"
-    reviewers:
-      - "rensatsu"
