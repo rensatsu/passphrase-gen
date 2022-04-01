@@ -17,7 +17,7 @@ footer {
 }
 </style>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
 import dayjs from "dayjs";
 

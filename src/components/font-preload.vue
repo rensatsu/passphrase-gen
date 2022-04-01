@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
 import "@fontsource/public-sans/variable.css";
 import "@fontsource/ibm-plex-mono/400.css";
