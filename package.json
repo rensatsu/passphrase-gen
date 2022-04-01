@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.5.3",
-    "@fontsource/public-sans": "^4.5.3",
+    "@fontsource/public-sans": "^4.5.5",
     "@heroicons/vue": "^1.0.5",
     "@rensatsu/blueberry-css": "^1.9.0",
     "dayjs": "^1.11.0",
