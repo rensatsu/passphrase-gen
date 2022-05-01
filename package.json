@@ -9,7 +9,7 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-mono": "^4.5.7",
+    "@fontsource/ibm-plex-mono": "^4.5.8",
     "@fontsource/public-sans": "^4.5.5",
     "@heroicons/vue": "^1.0.6",
     "@rensatsu/blueberry-css": "^1.9.0",
