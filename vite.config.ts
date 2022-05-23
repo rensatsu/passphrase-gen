@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     polyfillDynamicImport: false,
+    target: "es2020",
   },
   server: {
     proxy: {
