@@ -19,7 +19,7 @@
     "vue": "^3.2.33"
   },
   "devDependencies": {
-    "@babel/types": "^7.17.10",
+    "@babel/types": "^7.18.4",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vue/compiler-sfc": "^3.2.33",
     "prettier": "^2.6.2",
