@@ -16,16 +16,16 @@
     "dayjs": "^1.11.2",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
-    "vue": "^3.2.36"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@babel/types": "^7.18.7",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-sfc": "^3.2.36",
     "prettier": "^2.6.2",
-    "sass": "^1.52.1",
+    "sass": "^1.53.0",
     "typescript": "^4.7.4",
-    "vite": "^2.9.9",
+    "vite": "^2.9.13",
     "vue-tsc": "^0.35.2"
   }
 }
