@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.5.9",
-    "@fontsource/public-sans": "^4.5.8",
+    "@fontsource/public-sans": "^4.5.9",
     "@heroicons/vue": "^1.0.6",
     "@rensatsu/blueberry-css": "^1.9.0",
-    "dayjs": "^1.11.2",
+    "dayjs": "^1.11.3",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
     "vue": "^3.2.36"
   },
   "devDependencies": {
-    "@babel/types": "^7.18.4",
+    "@babel/types": "^7.18.7",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-sfc": "^3.2.36",
     "prettier": "^2.6.2",
