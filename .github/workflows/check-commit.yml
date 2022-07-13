@@ -1,0 +1,26 @@
+name: Check commits
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    name: Check
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Prepare Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        cache: 'yarn'
+
+    - name: Install Node packages
+      run: yarn install --frozen-lockfile
+
+    - name: Run code linter
+      run: npm run format:check
