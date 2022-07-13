@@ -3,12 +3,7 @@
     <h2 class="panel-heading">Dictionary Info</h2>
     <div class="panel-body">
       <div>
-        <a
-          :href="source"
-          target="_blank"
-          rel="noopener"
-          title="Source"
-        >
+        <a :href="source" target="_blank" rel="noopener" title="Source">
           <ExternalLinkIcon class="icon"></ExternalLinkIcon>
         </a>
         {{ title }}

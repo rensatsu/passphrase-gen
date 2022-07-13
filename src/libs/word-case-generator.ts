@@ -11,7 +11,8 @@ function* randomWordCaseGenerator(): Generator<string> {
   const randomCaseOffset = getCryptoRandomArbitrary(0, 1);
   let idx = 0;
   while (1) {
-    const nextRes = idx % 2 === randomCaseOffset ? WordCase.Lower : WordCase.Upper;
+    const nextRes =
+      idx % 2 === randomCaseOffset ? WordCase.Lower : WordCase.Upper;
     yield nextRes;
     idx++;
   }

@@ -7,16 +7,16 @@ $font-family-sans: "Public SansVariable";
 $font-family-mono: "IBM Plex Mono", monospace;
 
 // Blueberry CSS Core
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/core/utils';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/core/variables';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/core/functions';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/core/core';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/core/dark-mode';
+@import "@rensatsu/blueberry-css/scss/blueberry/core/utils";
+@import "@rensatsu/blueberry-css/scss/blueberry/core/variables";
+@import "@rensatsu/blueberry-css/scss/blueberry/core/functions";
+@import "@rensatsu/blueberry-css/scss/blueberry/core/core";
+@import "@rensatsu/blueberry-css/scss/blueberry/core/dark-mode";
 
 // Additional Components
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/components/alert';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/components/controls';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/components/grid';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/components/lists';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/components/panel';
-@import '../../../node_modules/@rensatsu/blueberry-css/scss/blueberry/components/text';
+@import "@rensatsu/blueberry-css/scss/blueberry/components/alert";
+@import "@rensatsu/blueberry-css/scss/blueberry/components/controls";
+@import "@rensatsu/blueberry-css/scss/blueberry/components/grid";
+@import "@rensatsu/blueberry-css/scss/blueberry/components/lists";
+@import "@rensatsu/blueberry-css/scss/blueberry/components/panel";
+@import "@rensatsu/blueberry-css/scss/blueberry/components/text";

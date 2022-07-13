@@ -30,7 +30,11 @@ h1 > a {
   margin: 0 1rem 0 0;
 }
 
-a, a:focus, a:hover, a:active, a:visited {
+a,
+a:focus,
+a:hover,
+a:active,
+a:visited {
   text-decoration: none;
   color: inherit;
 }

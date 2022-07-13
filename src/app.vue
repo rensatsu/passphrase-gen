@@ -40,12 +40,8 @@ details > summary {
             class="btn btn-block form-group"
             @click.prevent="toggleAdvanced"
           >
-            <template v-if="options.isAdvanced">
-              Hide advanced options
-            </template>
-            <template v-else>
-              Show advanced options
-            </template>
+            <template v-if="options.isAdvanced">Hide advanced options</template>
+            <template v-else>Show advanced options</template>
           </button>
 
           <div class="form-group" v-if="options.isAdvanced">
@@ -73,24 +69,24 @@ details > summary {
           <div class="form-group" v-if="options.isAdvanced">
             <label for="inp-min-length">Word length</label>
             <div class="grid grid-mobile--1-1 grid--1-1">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="inp-min-length"
-                  v-model.number="options.minWordLength"
-                  min="1"
-                  max="15"
-                  placeholder="Min word length"
-                />
-                <input
-                  type="number"
-                  class="form-control"
-                  id="inp-max-length"
-                  v-model.number="options.maxWordLength"
-                  min="1"
-                  max="15"
-                  placeholder="Max word length"
-                />
+              <input
+                type="number"
+                class="form-control"
+                id="inp-min-length"
+                v-model.number="options.minWordLength"
+                min="1"
+                max="15"
+                placeholder="Min word length"
+              />
+              <input
+                type="number"
+                class="form-control"
+                id="inp-max-length"
+                v-model.number="options.maxWordLength"
+                min="1"
+                max="15"
+                placeholder="Max word length"
+              />
             </div>
           </div>
           <div class="form-group" v-if="options.isAdvanced">
