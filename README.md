@@ -16,22 +16,22 @@ Make sure to enable `vetur.experimental.templateInterpolationService` in setting
 
 ## Project setup
 ```
-npm install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run dev
+yarn run dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn run build
 ```
 
 ### Lints and fixes files
 ```
-npm run format
+yarn run format
 ```
 
 [banner]: ./.repository/banner.png
