@@ -14,7 +14,7 @@
     "@fontsource/public-sans": "^4.5.9",
     "@heroicons/vue": "^1.0.6",
     "@rensatsu/blueberry-css": "^1.9.0",
-    "dayjs": "^1.11.3",
+    "dayjs": "^1.11.4",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
     "vue": "^3.2.37"
