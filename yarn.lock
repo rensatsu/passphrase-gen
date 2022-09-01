@@ -25,10 +25,10 @@
   resolved "https://registry.npmjs.org/@fontsource/ibm-plex-mono/-/ibm-plex-mono-4.5.10.tgz"
   integrity sha512-YmyewD+qHgo4ylcNSg6T9zpneRS34HhFd8cpF2TrJMbM3iKOW59XwmZqzdKyctzU0UQoHUFzjAAzDJ4THElFRA==
 
-"@fontsource/public-sans@^4.5.9":
-  version "4.5.9"
-  resolved "https://registry.npmjs.org/@fontsource/public-sans/-/public-sans-4.5.9.tgz"
-  integrity sha512-f7ENFYyQwz7hrNv10/SPip+eczJPrwgNaP3FK6XiTMwRk9AJqI/asw9mcYc6nokHRJgmtLTq8FenN9BkEbl1iQ==
+"@fontsource/public-sans@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-4.5.10.tgz#024f284d63e1de3e7bf1ee9146a5af15d0ed25e0"
+  integrity sha512-WHqsfQXyjrIy9cQVnsVvnNRIvqB5K9+4OieYSZGRkOhAe7XSR6ghiwjkXVwF6Sc6iGE0YSBpktPymYt2USbHYw==
 
 "@heroicons/vue@^1.0.6":
   version "1.0.6"
