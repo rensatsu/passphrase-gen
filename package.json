@@ -10,23 +10,23 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-mono": "^4.5.10",
-    "@fontsource/public-sans": "^4.5.9",
-    "@heroicons/vue": "^1.0.6",
+    "@fontsource/ibm-plex-mono": "^4.5.11",
+    "@fontsource/public-sans": "^4.5.10",
+    "@heroicons/vue": "^2.0.10",
     "@rensatsu/blueberry-css": "^1.9.0",
-    "dayjs": "^1.11.4",
+    "dayjs": "^1.11.5",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
-    "vue": "^3.2.37"
+    "vue": "^3.2.38"
   },
   "devDependencies": {
-    "@babel/types": "^7.18.9",
-    "@vitejs/plugin-vue": "^3.0.1",
-    "@vue/compiler-sfc": "^3.2.37",
+    "@babel/types": "^7.18.13",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/compiler-sfc": "^3.2.38",
     "prettier": "^2.7.1",
-    "sass": "^1.54.0",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.4",
-    "vue-tsc": "^0.39.4"
+    "sass": "^1.54.8",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vue-tsc": "^0.40.5"
   }
 }
