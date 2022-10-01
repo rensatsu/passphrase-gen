@@ -36,10 +36,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-4.5.10.tgz#024f284d63e1de3e7bf1ee9146a5af15d0ed25e0"
   integrity sha512-WHqsfQXyjrIy9cQVnsVvnNRIvqB5K9+4OieYSZGRkOhAe7XSR6ghiwjkXVwF6Sc6iGE0YSBpktPymYt2USbHYw==
 
-"@heroicons/vue@^2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.10.tgz#9de6807b13d77db82f10a652d5ec5c0c00393b54"
-  integrity sha512-K32WvSqsuWQrxqAAGCaTELW6VCOgg7OeVP+VBwCMbyeflnguJlCfHNlJ+0z4aPpgJCWB2RESRy3x59t+2byKSg==
+"@heroicons/vue@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.11.tgz#b228ed87b99ddf1e99faa56134a6a05a7c870a2d"
+  integrity sha512-nTfN4aZVCP8Xntt9Q9RvH+vDagFHA4zFCUge6oCdkBrELH1i6K9feubvnEMhRIYdwC+nWULqKyJP7iVoWkR6Eg==
 
 "@rensatsu/blueberry-css@^1.9.0":
   version "1.9.0"
