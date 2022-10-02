@@ -4,7 +4,7 @@
     <div class="panel-body">
       <div>
         <a :href="source" target="_blank" rel="noopener" title="Source">
-          <v-icon name="bi-box-arrow-up-right" class="icon" />
+          <fa-icon icon="fa-solid fa-up-right-from-square" class="icon" />
         </a>
         {{ title }}
       </div>
@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
 .icon {
-  width: 1.25rem;
+  width: 1rem;
   float: right;
   margin: 0 0 1ch 1ch;
 }
@@ -37,7 +37,6 @@
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
 import dictionaryList from "../libs/load-dictionaries";
-import { OhVueIcon } from "oh-vue-icons";
 
 const dictionaries = dictionaryList.list();
 
@@ -59,10 +58,6 @@ export default defineComponent({
     source(): string {
       return dictionaries.get(this.selected)?.source ?? "";
     },
-  },
-
-  components: {
-    "v-icon": OhVueIcon,
   },
 });
 </script>

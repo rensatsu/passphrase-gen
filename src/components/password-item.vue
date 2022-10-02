@@ -2,8 +2,8 @@
   <div class="list-group-item" href="#">
     <pre><code>{{ password }}</code></pre>
     <a href="#" @click.prevent="copy(password)" title="Copy" :hidden="hide">
-      <v-icon name="bi-clipboard" class="icon" v-if="!copied" />
-      <v-icon name="bi-clipboard-check" class="icon" v-else />
+      <fa-icon class="icon" icon="fa-solid fa-clipboard" v-if="!copied" />
+      <fa-icon class="icon" icon="fa-solid fa-check" v-else />
     </a>
   </div>
 </template>
@@ -41,9 +41,6 @@ pre {
 import { defineComponent } from "@vue/runtime-core";
 import delay from "delay";
 
-// loading icons
-import { OhVueIcon } from "oh-vue-icons";
-
 export default defineComponent({
   data() {
     return {
@@ -57,10 +54,6 @@ export default defineComponent({
       type: String,
       required: true,
     },
-  },
-
-  components: {
-    "v-icon": OhVueIcon,
   },
 
   methods: {

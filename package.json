@@ -10,18 +10,20 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-mono": "^4.5.11",
-    "@fontsource/public-sans": "^4.5.10",
+    "@fontsource/ibm-plex-mono": "^4.5.12",
+    "@fontsource/public-sans": "^4.5.11",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
     "@rensatsu/blueberry-css": "^1.9.0",
     "dayjs": "^1.11.5",
     "delay": "^5.0.0",
-    "oh-vue-icons": "^1.0.0-rc3",
     "upper-case-first": "^2.0.2",
     "vue": "^3.2.40"
   },
   "devDependencies": {
     "@babel/types": "^7.19.3",
-    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitejs/plugin-vue": "^3.1.2",
     "@vue/compiler-sfc": "^3.2.40",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",

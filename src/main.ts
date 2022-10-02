@@ -1,15 +1,23 @@
 import { createApp } from "vue";
 import MainApp from "./app.vue";
-
-import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  BiClipboard,
-  BiClipboardCheck,
-  BiBoxArrowUpRight,
-} from "oh-vue-icons/icons";
+  faClipboard,
+  faCheck,
+  faUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
 
-addIcons(BiClipboard, BiClipboardCheck, BiBoxArrowUpRight);
+// Make sure this is before any other `fontawesome` API calls
+config.autoAddCss = false;
 
+if (import.meta.env.PROD) {
+  config.showMissingIcons = false;
+}
+
+library.add(faClipboard, faCheck, faUpRightFromSquare);
+
+// Create Vue App
 const app = createApp(MainApp);
-app.component("v-icon", OhVueIcon);
+app.component("fa-icon", FontAwesomeIcon);
 app.mount("#app");
