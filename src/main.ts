@@ -1,4 +1,15 @@
 import { createApp } from "vue";
-import App from "./app.vue";
+import MainApp from "./app.vue";
 
-createApp(App).mount("#app");
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import {
+  BiClipboard,
+  BiClipboardCheck,
+  BiBoxArrowUpRight,
+} from "oh-vue-icons/icons";
+
+addIcons(BiClipboard, BiClipboardCheck, BiBoxArrowUpRight);
+
+const app = createApp(MainApp);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");

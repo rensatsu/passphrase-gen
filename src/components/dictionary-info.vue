@@ -4,7 +4,7 @@
     <div class="panel-body">
       <div>
         <a :href="source" target="_blank" rel="noopener" title="Source">
-          <ExternalLinkIcon class="icon"></ExternalLinkIcon>
+          <v-icon name="bi-box-arrow-up-right" class="icon" />
         </a>
         {{ title }}
       </div>
@@ -37,7 +37,7 @@
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core";
 import dictionaryList from "../libs/load-dictionaries";
-import ExternalLinkIcon from "@heroicons/vue/outline/ExternalLinkIcon.js";
+import { OhVueIcon } from "oh-vue-icons";
 
 const dictionaries = dictionaryList.list();
 
@@ -62,7 +62,7 @@ export default defineComponent({
   },
 
   components: {
-    ExternalLinkIcon,
+    "v-icon": OhVueIcon,
   },
 });
 </script>
