@@ -16,7 +16,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@rensatsu/blueberry-css": "^1.9.0",
-    "dayjs": "^1.11.5",
     "delay": "^5.0.0",
     "upper-case-first": "^2.0.2",
     "vue": "^3.2.40"
