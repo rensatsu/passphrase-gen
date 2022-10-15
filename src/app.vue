@@ -22,17 +22,11 @@ details > summary {
               id="sel-dictionary"
               v-model="options.dictionary"
             >
-              <option
-                v-for="[id, dict] of dictionaries"
-                v-bind:key="id"
-                :value="id"
-              >
+              <option v-for="[id, dict] of dictionaries" :key="id" :value="id">
                 {{ dict.name }}
               </option>
             </select>
-            <DictionaryInfo
-              v-bind:selected="options.dictionary"
-            ></DictionaryInfo>
+            <DictionaryInfo :selected="options.dictionary"></DictionaryInfo>
           </div>
 
           <button
@@ -51,7 +45,7 @@ details > summary {
               class="form-control"
               id="inp-words"
               v-model.number="options.words"
-              min="0"
+              min="1"
               max="20"
             />
           </div>
@@ -146,14 +140,14 @@ details > summary {
           </div>
         </form>
       </div>
-      <div v-if="result?.length === 0 && !error">
+      <div v-if="result.length === 0 && !error">
         <About></About>
         <SourceCode></SourceCode>
       </div>
       <PasswordList
         v-else
-        v-bind:error="error"
-        v-bind:result="result"
+        :error="error"
+        :result="result"
         @reset="reset"
       ></PasswordList>
     </div>
@@ -161,7 +155,10 @@ details > summary {
   <Footer class="container"></Footer>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { reactive, ref } from "vue";
+import type { Ref } from "vue";
+
 import FontPreload from "./components/font-preload.vue";
 import Footer from "./components/footer.vue";
 import About from "./components/about.vue";
@@ -172,81 +169,65 @@ import PasswordList from "./components/password-list.vue";
 
 import dictionaryList from "./libs/load-dictionaries";
 import { Options } from "./libs/settings-storage";
-import delimiters from "./libs/delimiters";
+import { delimiters as delimitersMap } from "./libs/delimiters";
 import { wordCaseNames } from "./libs/word-cases";
 import { getRandomPhrase } from "./libs/phrase-generator";
-import { defineComponent } from "@vue/runtime-core";
-import IAppComponentData from "./libs/struct/i-app-component-data";
 
-// load settings from url
-const options = new Options();
+// declare and load dictionaries
+const dictionaries = ref(dictionaryList.list());
 
-// load dictionaries list
-const dictionaries = dictionaryList.list();
+// declare and load settings from url
+const options = reactive(new Options());
 
 if (!options.dictionary) {
-  options.dictionary = dictionaries.keys().next().value;
+  options.dictionary = dictionaries.value.keys().next().value;
 }
 
-export default defineComponent({
-  data() {
-    return {
-      dictionaries: dictionaries,
-      options: options,
-      wordCases: wordCaseNames,
-      delimiters: delimiters,
-      result: [],
-      locked: false,
-      error: undefined,
-    } as IAppComponentData;
-  },
-  components: {
-    FontPreload,
-    Footer,
-    About,
-    SourceCode,
-    DictionaryInfo,
-    Header,
-    PasswordList,
-  },
-  methods: {
-    toggleAdvanced() {
-      this.options.isAdvanced = !this.options.isAdvanced;
-    },
-    reset() {
-      this.result = [];
-      this.error = undefined;
-    },
-    async update() {
-      this.locked = true;
-      this.error = undefined;
+const wordCases = ref(wordCaseNames);
+const delimiters = ref(delimitersMap);
+const result: Ref<Array<string>> = reactive(ref([]));
+const locked = ref(false);
+const error: Ref<string | undefined> = ref(undefined);
 
-      try {
-        for (let i = 0; i < this.options.count; i++) {
-          const rnd = await getRandomPhrase({
-            dictionary: this.options.dictionary,
-            words: this.options.words,
-            digits: this.options.digits,
-            minWordLength: this.options.minWordLength,
-            maxWordLength: this.options.maxWordLength,
-            wordCase: this.options.wordCase,
-            delimiter: this.options.delimiter,
-          });
+function toggleAdvanced() {
+  options.isAdvanced = !options.isAdvanced;
+}
 
-          this.options.save();
+function reset() {
+  result.value.splice(0, result.value.length);
+  error.value = undefined;
+}
 
-          this.result.unshift(rnd as never);
-        }
-      } catch (e: unknown) {
-        if (e instanceof Error) {
-          this.error = e.message;
-        } else {
-          this.error = "Unknown error";
-        }
-      }
+async function update() {
+  locked.value = true;
+  error.value = undefined;
 
-      this.locked = false;
-    },
-  },
-});
+  try {
+    options.save();
+
+    for (let i = 0; i < options.count; i++) {
+      const rnd = await getRandomPhrase({
+        dictionary: options.dictionary,
+        words: options.words,
+        digits: options.digits,
+        minWordLength: options.minWordLength,
+        maxWordLength: options.maxWordLength,
+        wordCase: options.wordCase,
+        delimiter: options.delimiter,
+      });
+
+      console.log("Generated password", rnd);
+      // result.value = [rnd, ...result.value];
+      result.value.unshift(rnd);
+    }
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      error.value = e.message;
+    } else {
+      error.value = "Unknown error";
+    }
+  }
+
+  locked.value = false;
+}
 </script>

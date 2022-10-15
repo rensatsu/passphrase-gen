@@ -1,7 +1,36 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import type { Ref } from "vue";
+import delay from "delay";
+
+interface Props {
+  password: string;
+}
+
+const copied: Ref<Boolean> = ref(false);
+const hide: Ref<Boolean> = ref(false);
+const { password } = defineProps<Props>();
+
+async function copy(text: string): Promise<void> {
+  await navigator.clipboard.writeText(text).catch(() => {});
+
+  copied.value = true;
+
+  // restore copy icon
+  await delay(1000);
+  copied.value = false;
+  hide.value = true;
+
+  // reset focus
+  await delay(1);
+  hide.value = false;
+}
+</script>
+
 <template>
   <div class="list-group-item" href="#">
     <pre><code>{{ password }}</code></pre>
-    <a href="#" @click.prevent="copy(password)" title="Copy" :hidden="hide">
+    <a href="#" @click.prevent="copy(password)" title="Copy" :hidden="!!hide">
       <fa-icon class="icon" icon="fa-solid fa-clipboard" v-if="!copied" />
       <fa-icon class="icon" icon="fa-solid fa-check" v-else />
     </a>
@@ -36,41 +65,3 @@ pre {
   }
 }
 </style>
-
-<script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
-import delay from "delay";
-
-export default defineComponent({
-  data() {
-    return {
-      copied: false,
-      hide: false,
-    };
-  },
-
-  props: {
-    password: {
-      type: String,
-      required: true,
-    },
-  },
-
-  methods: {
-    async copy(text: string): Promise<void> {
-      await navigator.clipboard.writeText(text).catch(() => {});
-
-      this.copied = true;
-
-      // restore copy icon
-      await delay(1000);
-      this.copied = false;
-      this.hide = true;
-
-      // reset focus
-      await delay(1);
-      this.hide = false;
-    },
-  },
-});
-</script>

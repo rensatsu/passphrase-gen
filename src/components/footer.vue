@@ -17,16 +17,7 @@ footer {
 }
 </style>
 
-<script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
-import dayjs from "dayjs";
-
-export default defineComponent({
-  data() {
-    return {
-      year: dayjs().format("YYYY"),
-      url: "https://rensatsu.netlify.app",
-    };
-  },
-});
+<script setup lang="ts">
+import { ref } from "vue";
+const url = ref("https://rensatsu.netlify.app");
 </script>

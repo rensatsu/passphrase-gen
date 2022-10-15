@@ -7,7 +7,7 @@
           {{ error }}
         </article>
       </div>
-      <div v-else class="list-group" v-for="line in result" v-bind:key="line">
+      <div v-else class="list-group" v-for="line in result" :key="line">
         <PasswordItem :password="line"></PasswordItem>
       </div>
 
@@ -24,27 +24,23 @@
 }
 </style>
 
-<script lang="ts">
-import { defineComponent, PropType } from "@vue/runtime-core";
+<script setup lang="ts">
 import PasswordItem from "./password-item.vue";
 
-export default defineComponent({
-  props: {
-    error: String,
-    result: {
-      type: Array as PropType<Array<string>>,
-      default: [],
-    },
-  },
+interface Props {
+  error?: string;
+  result: string[];
+}
 
-  components: {
-    PasswordItem,
-  },
-
-  methods: {
-    reset(): void {
-      this.$emit("reset");
-    },
-  },
+const { error, result } = withDefaults(defineProps<Props>(), {
+  result: () => [],
 });
+
+const emit = defineEmits<{
+  (event: "reset"): void;
+}>();
+
+function reset(): void {
+  emit("reset");
+}
 </script>

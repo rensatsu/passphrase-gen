@@ -12,4 +12,4 @@ const delimiters = new Map([
   ["No delimiter", ""],
 ]) as Map<string, string>;
 
-export default delimiters;
+export { delimiters };
