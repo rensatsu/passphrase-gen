@@ -13,7 +13,7 @@
     "@fontsource/ibm-plex-mono": "^4.5.12",
     "@fontsource/public-sans": "^4.5.11",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^5.0.0",
