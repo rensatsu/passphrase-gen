@@ -12,7 +12,7 @@
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.5.13",
     "@fontsource/public-sans": "^4.5.12",
-    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@rensatsu/blueberry-css": "^1.9.0",
