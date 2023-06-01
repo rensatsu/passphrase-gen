@@ -141,10 +141,10 @@
   resolved "https://registry.npmjs.org/@fontsource/ibm-plex-mono/-/ibm-plex-mono-4.5.13.tgz"
   integrity sha512-KAE7X2LgCV4X6p7vj1h2phRnhPX4YUa8FBAB0Jj9xW7Q+p+k2ce4HEAMJJ2RFHI075ClgQx+KZuDBNuiKgp5yw==
 
-"@fontsource/public-sans@^4.5.12":
-  version "4.5.12"
-  resolved "https://registry.npmjs.org/@fontsource/public-sans/-/public-sans-4.5.12.tgz"
-  integrity sha512-sa6lr+lQQB1Iif2xyWZmcCbReV3dj6m0CNXw5xbDwKO4BPeZxz+G+Vy9zWdzhaKpjmK6Ap2wIn1x79XVcvMRtQ==
+"@fontsource/public-sans@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-5.0.2.tgz#462012a3b14eef93870258fb3c46c301087063c9"
+  integrity sha512-oJnLkojebdJ/MbiMuoFaSJk2Phn0nBYSGeTJcWt4F3JNUYpOvpVeChA9zjxHhRyVS194ykk3ijFCnWdA4DTwrA==
 
 "@fortawesome/fontawesome-common-types@6.4.0":
   version "6.4.0"

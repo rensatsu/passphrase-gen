@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.5.13",
-    "@fontsource/public-sans": "^4.5.12",
+    "@fontsource/public-sans": "^5.0.2",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
