@@ -23,5 +23,5 @@ updates:
           - "@vue/*"
           - "vue-tsc"
           - "vite"
-          - "@vitejs/"
+          - "@vitejs/*"
           - "typescript"
