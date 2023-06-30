@@ -10,3 +10,18 @@ updates:
     schedule:
       interval: "monthly"
       time: "11:00"
+    groups:
+      ui:
+        patterns:
+          - "@fontsource/*"
+          - "@fortawesome/*"
+          - "@rensatsu/blueberry-css"
+
+      vue:
+        patterns:
+          - "vue"
+          - "@vue/*"
+          - "vue-tsc"
+          - "vite"
+          - "@vitejs/"
+          - "typescript"
