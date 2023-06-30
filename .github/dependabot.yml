@@ -25,3 +25,4 @@ updates:
           - "vite"
           - "@vitejs/*"
           - "typescript"
+          - "@babel/*"
