@@ -136,15 +136,15 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.18.tgz#3a8e57153905308db357fd02f57c180ee3a0a1fa"
   integrity sha512-qU25Ma1I3NqTSHJUOKi9sAH1/Mzuvlke0ioMJRthLXKm7JiSKVwFghlGbDLOO2sARECGhja4xYfRAZNPAkooYg==
 
-"@fontsource/ibm-plex-mono@^4.5.13":
-  version "4.5.13"
-  resolved "https://registry.npmjs.org/@fontsource/ibm-plex-mono/-/ibm-plex-mono-4.5.13.tgz"
-  integrity sha512-KAE7X2LgCV4X6p7vj1h2phRnhPX4YUa8FBAB0Jj9xW7Q+p+k2ce4HEAMJJ2RFHI075ClgQx+KZuDBNuiKgp5yw==
+"@fontsource/ibm-plex-mono@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/ibm-plex-mono/-/ibm-plex-mono-5.0.5.tgz#cee5c1a1d467e6b47349e815d9d14cd254208732"
+  integrity sha512-A1rDiQB7X7oOgsZbjeSQV3r/ZOBEZDjKEnlLvWqd4sMBZwGKTDnCxQYoqedY/8if2NXyiQoLXPdV5RpQ/3BerQ==
 
-"@fontsource/public-sans@^4.5.12":
-  version "4.5.12"
-  resolved "https://registry.npmjs.org/@fontsource/public-sans/-/public-sans-4.5.12.tgz"
-  integrity sha512-sa6lr+lQQB1Iif2xyWZmcCbReV3dj6m0CNXw5xbDwKO4BPeZxz+G+Vy9zWdzhaKpjmK6Ap2wIn1x79XVcvMRtQ==
+"@fontsource/public-sans@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-5.0.5.tgz#4de1e7fa1fed926be06a27c8f01544aa6d02a04c"
+  integrity sha512-HdC9hH6tSRTrznaaIioAkeRvK0/9N7zIFFjZZONF042Xh94978/5kEzOLgeqMdLerYAXkILEMnqbkMR/VGtUIA==
 
 "@fortawesome/fontawesome-common-types@6.4.0":
   version "6.4.0"
