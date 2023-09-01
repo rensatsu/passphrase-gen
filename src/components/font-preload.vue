@@ -17,16 +17,11 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
-import "@fontsource/public-sans/variable.css";
-import "@fontsource/ibm-plex-mono/400.css";
+<script setup lang="ts">
+import { ref } from "vue";
+import "@fontsource-variable/public-sans";
+import "@fontsource-variable/jetbrains-mono";
+import delimiters from "../libs/delimiters";
 
-export default defineComponent({
-  data() {
-    return {
-      testString: "abcXYZ123",
-    };
-  },
-});
+const testString = ref("abcXYZ123" + [...delimiters.values()].join(""));
 </script>
