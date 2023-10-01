@@ -136,10 +136,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
-"@fontsource-variable/jetbrains-mono@^5.0.9":
-  version "5.0.9"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/jetbrains-mono/-/jetbrains-mono-5.0.9.tgz#c0fab6173a507d3d752d96ba0c820a9d1e041a06"
-  integrity sha512-VaF1GjUbSFLJIeTG3WE721IyabL5ghOeseIfPukVrPBo+NNLhfFmHPMO+KH2/KSJ9AO/3/JNMYVkszVAnbMd6Q==
+"@fontsource-variable/jetbrains-mono@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/jetbrains-mono/-/jetbrains-mono-5.0.14.tgz#65fdf55f0a5ee974f6199d5543a5b0c7a244ec66"
+  integrity sha512-IT0i0Gw2jpVTmw5Bf6mzlxIBON7Hs+qbCYRskk78bLB0ptUVJA2dNDnx0tP7KPuwFc7ErfhbxJKJhL/VsTw8Kg==
 
 "@fontsource-variable/public-sans@^5.0.9":
   version "5.0.9"
