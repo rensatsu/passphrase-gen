@@ -17,7 +17,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
-    "upper-case-first": "^2.0.2",
+    "upper-case-first": "^3.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
