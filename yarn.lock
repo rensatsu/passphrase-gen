@@ -141,10 +141,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/jetbrains-mono/-/jetbrains-mono-5.0.14.tgz#65fdf55f0a5ee974f6199d5543a5b0c7a244ec66"
   integrity sha512-IT0i0Gw2jpVTmw5Bf6mzlxIBON7Hs+qbCYRskk78bLB0ptUVJA2dNDnx0tP7KPuwFc7ErfhbxJKJhL/VsTw8Kg==
 
-"@fontsource-variable/public-sans@^5.0.9":
-  version "5.0.9"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/public-sans/-/public-sans-5.0.9.tgz#2bfd50cb0644ce3bd519ef850fe14f385592bae6"
-  integrity sha512-N4ei3HOoltmw6SVoE5AztcdURLgla1K1oMGjmHJUUao//gjxvG+WB73wSlDvRaiUWRbBgUQm7fDXB+4F3qqpww==
+"@fontsource-variable/public-sans@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/public-sans/-/public-sans-5.0.16.tgz#b44c2d27418a4e4cf7be58edcc375df558e1528b"
+  integrity sha512-7dtF/xQsuDCX8PNC8jCzAtBpteybYIIpXUpZjUYxBjODwu6Bx0Od376/tgx9blPhd1Cy3318oZXg/pO7465+7A==
 
 "@fortawesome/fontawesome-common-types@6.4.2":
   version "6.4.2"
