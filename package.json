@@ -10,24 +10,24 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource-variable/jetbrains-mono": "^5.0.14",
-    "@fontsource-variable/public-sans": "^5.0.9",
+    "@fontsource-variable/jetbrains-mono": "^5.0.18",
+    "@fontsource-variable/public-sans": "^5.0.16",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
     "upper-case-first": "^2.0.2",
-    "vue": "^3.3.4"
+    "vue": "^3.3.7"
   },
   "devDependencies": {
     "@babel/types": "^7.23.0",
-    "@vitejs/plugin-vue": "^4.3.4",
-    "@vue/compiler-sfc": "^3.2.47",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vue/compiler-sfc": "^3.3.7",
     "prettier": "^3.0.3",
-    "sass": "^1.68.0",
+    "sass": "^1.69.5",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
-    "vue-tsc": "^1.8.15"
+    "vite": "^4.5.0",
+    "vue-tsc": "^1.8.22"
   }
 }
