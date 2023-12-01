@@ -18,16 +18,16 @@
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
     "upper-case-first": "^2.0.2",
-    "vue": "^3.3.7"
+    "vue": "^3.3.9"
   },
   "devDependencies": {
-    "@babel/types": "^7.23.0",
-    "@vitejs/plugin-vue": "^4.4.0",
+    "@babel/types": "^7.23.5",
+    "@vitejs/plugin-vue": "^4.5.1",
     "@vue/compiler-sfc": "^3.3.7",
     "prettier": "^3.1.0",
     "sass": "^1.69.5",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
-    "vue-tsc": "^1.8.22"
+    "typescript": "^5.3.2",
+    "vite": "^5.0.4",
+    "vue-tsc": "^1.8.24"
   }
 }
