@@ -10,8 +10,8 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource-variable/jetbrains-mono": "^5.0.18",
-    "@fontsource-variable/public-sans": "^5.0.16",
+    "@fontsource-variable/jetbrains-mono": "^5.0.19",
+    "@fontsource-variable/public-sans": "^5.0.17",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
