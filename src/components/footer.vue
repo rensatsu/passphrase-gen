@@ -23,7 +23,7 @@ import { defineComponent } from "@vue/runtime-core";
 export default defineComponent({
   data() {
     return {
-      url: "https://rensatsu.netlify.app",
+      url: "https://rensatsu.com",
     };
   },
 });

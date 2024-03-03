@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/dict": {
-        target: "https://ren-phrase-dict.netlify.app",
+        target: "https://phrase.rensatsu.com",
         changeOrigin: true,
       },
     },
