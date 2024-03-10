@@ -4,11 +4,12 @@
     <div class="panel-body">
       <div>This is a password phrase generator.</div>
       <div>
-        It generates a password phrase based on words from the selected
-        dictionary.
+        Create strong, memorable password phrases based on words from the
+        selected dictionary.
       </div>
       <div>
-        Also, you have an option to add a few digits to make it more secure.
+        You also have the option to increase security by incorporating digits
+        into your generated password phrases.
       </div>
       <div>
         <a href="https://xkcd.com/936/" target="_blank" rel="noopener"
