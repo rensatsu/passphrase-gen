@@ -10,24 +10,24 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource-variable/jetbrains-mono": "^5.0.18",
-    "@fontsource-variable/public-sans": "^5.0.16",
+    "@fontsource-variable/jetbrains-mono": "^5.0.20",
+    "@fontsource-variable/public-sans": "^5.0.18",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
     "upper-case-first": "^2.0.2",
-    "vue": "^3.3.10"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@babel/types": "^7.23.5",
-    "@vitejs/plugin-vue": "^4.5.1",
-    "@vue/compiler-sfc": "^3.3.7",
-    "prettier": "^3.1.0",
-    "sass": "^1.69.5",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.12",
-    "vue-tsc": "^1.8.25"
+    "@babel/types": "^7.24.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/compiler-sfc": "^3.4.21",
+    "prettier": "^3.2.5",
+    "sass": "^1.71.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
+    "vue-tsc": "^2.0.6"
   }
 }
