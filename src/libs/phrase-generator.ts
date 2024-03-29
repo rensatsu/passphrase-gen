@@ -38,7 +38,7 @@ async function fetchDictionary(name: string): Promise<string[]> {
     throw new Error("Unable to get dictionary information");
   }
 
-  const url = new URL(`/dict/${dictData.path}`, location.href);
+  const url = new URL(`https://passphrase-gen-dict-b86.pages.dev/dict/${dictData.path}`, location.href);
 
   const resp = await fetch(url.toString());
   if (!resp.ok) {

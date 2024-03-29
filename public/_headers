@@ -4,4 +4,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy: default-src 'none'; base-uri 'self'; script-src 'self'; style-src 'self'; font-src 'self'; form-action 'self'; connect-src 'self'; img-src 'self' data:;
+  Content-Security-Policy: default-src 'none'; base-uri 'self'; script-src 'self'; style-src 'self'; font-src 'self' data:; form-action 'self'; connect-src 'self' https://passphrase-gen-dict-b86.pages.dev; img-src 'self' data:;
