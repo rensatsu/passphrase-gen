@@ -18,10 +18,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
-        cache: yarn
+        cache: npm
 
     - name: Install Node packages
-      run: yarn install --frozen-lockfile
+      run: npm ci
 
     - name: Run code linter
       run: npm run format:check
