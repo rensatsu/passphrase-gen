@@ -10,10 +10,10 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource-variable/jetbrains-mono": "^5.0.20",
-    "@fontsource-variable/public-sans": "^5.0.18",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fontsource-variable/jetbrains-mono": "^5.0.21",
+    "@fontsource-variable/public-sans": "^5.0.19",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
