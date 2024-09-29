@@ -185,7 +185,7 @@ const options = new Options();
 const dictionaries = dictionaryList.list();
 
 if (!options.dictionary) {
-  options.dictionary = dictionaries.keys().next().value;
+  options.dictionary = dictionaries.keys().next().value ?? "";
 }
 
 export default defineComponent({
