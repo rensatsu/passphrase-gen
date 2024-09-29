@@ -29,7 +29,7 @@ export default defineComponent({
   },
 
   components: {
-    ExtLink
-  }
+    ExtLink,
+  },
 });
 </script>
