@@ -1,7 +1,7 @@
 <template>
   <footer>
     <p class="text-center">
-      Created by <a :href="url" target="_blank" rel="noopener">Rensatsu</a>
+      Created by <ExtLink :href="url">Rensatsu</ExtLink>
     </p>
   </footer>
 </template>
@@ -18,7 +18,8 @@ footer {
 </style>
 
 <script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
+import { defineComponent } from "vue";
+import ExtLink from "./ext-link.vue";
 
 export default defineComponent({
   data() {
@@ -26,5 +27,9 @@ export default defineComponent({
       url: "https://rensatsu.com",
     };
   },
+
+  components: {
+    ExtLink
+  }
 });
 </script>

@@ -1,9 +1,9 @@
-import dictionaries from "./load-dictionaries";
+import dictionaries from "./load-dictionaries.js";
 import { upperCaseFirst } from "upper-case-first";
-import IOptions from "./struct/i-options";
-import { getCryptoRandom, getRandomDigits } from "./random-numbers";
-import { getNextWordCase } from "./word-case-generator";
-import { WordCase } from "./word-cases";
+import IOptions from "./struct/i-options.js";
+import { getCryptoRandom, getRandomDigits } from "./random-numbers.js";
+import { getNextWordCase } from "./word-case-generator.js";
+import { WordCase } from "./word-cases.js";
 
 /**
  * Minimum amount of entries in a dictionary.

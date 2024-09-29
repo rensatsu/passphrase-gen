@@ -3,9 +3,9 @@
     <h2 class="panel-heading">Dictionary Info</h2>
     <div class="panel-body">
       <div>
-        <a :href="source" target="_blank" rel="noopener" title="Source">
+        <ExtLink :href="source" title="Dictionary source">
           <fa-icon icon="fa-solid fa-up-right-from-square" class="icon" />
-        </a>
+        </ExtLink>
         {{ title }}
       </div>
     </div>
@@ -35,6 +35,7 @@
 </style>
 
 <script lang="ts">
+import ExtLink from "./ext-link.vue";
 import { defineComponent } from "@vue/runtime-core";
 import dictionaryList from "../libs/load-dictionaries";
 
@@ -58,6 +59,10 @@ export default defineComponent({
     source(): string {
       return dictionaries.get(this.selected)?.source ?? "";
     },
+  },
+
+  components: {
+    ExtLink,
   },
 });
 </script>

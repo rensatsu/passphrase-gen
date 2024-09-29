@@ -12,10 +12,21 @@
         into your generated password phrases.
       </div>
       <div>
-        <a href="https://xkcd.com/936/" target="_blank" rel="noopener"
-          >Check out the xkcd comic about password strength</a
+        <ExtLink href="https://xkcd.com/936/">
+          Check out the xkcd comic about password strength</ExtLink
         >.
       </div>
     </div>
   </article>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import ExtLink from "./ext-link.vue";
+
+export default defineComponent({
+  components: {
+    ExtLink,
+  },
+});
+</script>
