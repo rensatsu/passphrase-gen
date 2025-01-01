@@ -10,6 +10,10 @@ updates:
     schedule:
       interval: "monthly"
       time: "11:00"
+    ignore:
+      - dependency-name: "sass"
+        versions:
+          - ">= 3.0.0"
     groups:
       ui:
         patterns:
