@@ -25,7 +25,7 @@
     "@babel/types": "^7.27.1",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/compiler-sfc": "^3.5.13",
-    "prettier": "^3.5.2",
+    "prettier": "^3.6.2",
     "sass": "^1.89.1",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
