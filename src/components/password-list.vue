@@ -7,8 +7,8 @@
           {{ error }}
         </article>
       </div>
-      <div v-else class="list-group" v-for="line in result" v-bind:key="line">
-        <PasswordItem :password="line"></PasswordItem>
+      <div v-else class="list-group">
+        <PasswordItem :password="line" v-for="line in result" v-bind:key="line"></PasswordItem>
       </div>
 
       <div class="panel-footer">
@@ -21,6 +21,7 @@
 <style lang="scss" scoped>
 .list-group {
   --list-padding: 1rem 1.25rem;
+  --list-border-width: 0;
 }
 </style>
 
