@@ -1,7 +1,7 @@
 /** A module to load and save form parameters in query string */
 
-import IOptions from "./struct/i-options";
-import { WordCase } from "./word-cases";
+import IOptions from "./struct/i-options.js";
+import { WordCase } from "./word-cases.js";
 
 class Options implements IOptions {
   dictionary: string = "";

@@ -1,6 +1,6 @@
-import Dictionary from "../dictionary";
-import { Options } from "../settings-storage";
-import { WordCase } from "../word-cases";
+import Dictionary from "../dictionary.js";
+import { Options } from "../settings-storage.js";
+import { WordCase } from "../word-cases.js";
 
 interface IAppComponentData {
   dictionaries: Map<string, Dictionary>;

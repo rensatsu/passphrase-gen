@@ -1,4 +1,4 @@
-import IDictionary from "./struct/i-dictionary";
+import IDictionary from "./struct/i-dictionary.js";
 
 /** Class representing a dictionary */
 class Dictionary {

@@ -1,5 +1,5 @@
-import { getCryptoRandomArbitrary } from "./random-numbers";
-import { WordCase } from "./word-cases";
+import { getCryptoRandomArbitrary } from "./random-numbers.js";
+import { WordCase } from "./word-cases.js";
 
 function* sameWordCaseGenerator(wordCase: WordCase): Generator<string> {
   while (1) {

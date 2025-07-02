@@ -1,4 +1,4 @@
-import { WordCase } from "../word-cases";
+import { WordCase } from "../word-cases.js";
 
 interface IOptions {
   /**

@@ -1,4 +1,4 @@
-import Dictionary from "./dictionary";
+import Dictionary from "./dictionary.js";
 
 /** Class representing a collection of dictionaries */
 class DictionaryCollection {

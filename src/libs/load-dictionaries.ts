@@ -1,7 +1,7 @@
 /** A module to create a new collection and fill it with dictionaries */
 
-import DictionaryCollection from "./dictionary-collection";
-import Dictionary from "./dictionary";
+import DictionaryCollection from "./dictionary-collection.js";
+import Dictionary from "./dictionary.js";
 
 const collection = new DictionaryCollection();
 
