@@ -8,7 +8,11 @@
         </article>
       </div>
       <div v-else class="list-group">
-        <PasswordItem :password="line" v-for="line in result" v-bind:key="line"></PasswordItem>
+        <PasswordItem
+          :password="line"
+          v-for="line in result"
+          v-bind:key="line"
+        ></PasswordItem>
       </div>
 
       <div class="panel-footer">
