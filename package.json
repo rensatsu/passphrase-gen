@@ -13,9 +13,9 @@
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.6",
     "@fontsource-variable/public-sans": "^5.2.6",
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.1.1",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
     "upper-case-first": "^3.0.0",
