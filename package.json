@@ -11,11 +11,11 @@
     "format:check": "prettier --check 'src/**/*.{ts,js,sass,scss,css,json,md,vue}'"
   },
   "dependencies": {
-    "@fontsource-variable/jetbrains-mono": "^5.2.6",
-    "@fontsource-variable/public-sans": "^5.2.6",
-    "@fortawesome/fontawesome-svg-core": "^7.0.0",
-    "@fortawesome/free-solid-svg-icons": "^7.0.0",
-    "@fortawesome/vue-fontawesome": "^3.1.1",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@fontsource-variable/public-sans": "^5.2.7",
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/vue-fontawesome": "^3.1.2",
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
     "upper-case-first": "^3.0.0",
