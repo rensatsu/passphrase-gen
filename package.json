@@ -19,7 +19,7 @@
     "@rensatsu/blueberry-css": "^1.9.0",
     "delay": "^6.0.0",
     "upper-case-first": "^3.0.0",
-    "vue": "^3.5.18"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
     "@babel/types": "^7.28.2",
@@ -27,8 +27,8 @@
     "@vue/compiler-sfc": "^3.5.17",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
-    "typescript": "^5.9.2",
-    "vite": "^7.0.6",
-    "vue-tsc": "^3.0.4"
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7",
+    "vue-tsc": "^3.1.0"
   }
 }
